@@ -8,15 +8,35 @@
 + 任何人都可以从github查看本钱包的所有源代码，以确保可以check安全性，也可以自己从源代码build自己的插件。
 + 可以选择不同网络（主网、Arbi、OP），从而链接不同的EntryPoint，但是钱包地址可以保持不变？
 + 可以使用钱包的基本功能：
-+ 收取来自任何EOA 钱包或者Contract wallet合约钱包发送的ERC20或者ERC721、ERC1155等Token资产。
-+ Transfer自己用于的上述资产到任何EOA或者Contract wallet Account地址。
-+ Transfer目前需要自己预先存储一定的ETH支付自己合约钱包交易的gasfee，未来引入paymaster。
-+ 正常连接和使用Layer2的DApp，DApp需要引用4337提供的SDK，从而适配4337钱包的签名登录和交易发起。
-+ 
++ Get：收取来自任何EOA 钱包或者Contract wallet合约钱包发送的ERC20或者ERC721、ERC1155等Token资产。
++ Send：Transfer自己用于的上述资产到任何EOA或者Contract wallet Account地址。
++ Gas：Transfer目前需要自己预先存储一定的ETH支付自己合约钱包交易的gasfee，未来引入paymaster。
++ Dapp：正常连接和使用Layer2的DApp，DApp需要引用4337提供的SDK，从而适配4337钱包的签名登录和交易发起。
++ Recovery：选择Guradian（默认4337wallet官方团队是第一个），任何时间主动选择Recovery（通过link发送给Guardian）
++ Programming：目前仅提供日限额模块加载到contract wallet，后续扩展此功能。
++ 其他常规Wallet的功能，例如交易的查看（链接到scan url），不再赘述。
 #### 2.MVP的使用形式、网络和基本要求
++ Chrome、Safari、Edge等Webkit/Blink内核的常规版本，支持Chrome插件机制，未来会提供Brave、FF等的插件（本质相同）。
++ 目前只有插件方式，未来再考虑Page模式、移动端、PC端。
++ Relay如果有，需要在国内外都架设，提供基础的交易底层通信支持。
++ 基本沿袭Metamask的使用习惯（需要分析下，有哪些路径依赖习惯）。
 
 #### 3.MVP的场景和功能点拆解
-
++ 根据以上场景描述，我们来定义下MVP V0.1包含哪些场景Case，场景的流程会是如何发生，有哪些原子Action。
+##### 获取
++ 访问 ***网址，提供各个商店链接，或者自行下载安装，获取对应浏览器的插件，安装后完成获取。
++ 需要产品设计细节
+#### 初始化
++ 3秒钟初始化，立刻拥有自己的合约钱包地址，用来收款等操作。
++ 提示增强安全性：设置Guardiand等流程
++ 需要产品设计细节
+#### Get
++ 复制地址，发送给别人
++ 其他人交易成功后，钱包提示收款，点击提示查看交易细节。不同ERC，未来要给展示空间！尤其是NFT、SBT！
++ 需要产品设计细节
+#### Send
++ 
++ 需要产品设计细节
 #### 4.业务架构（核心场景抽象+未来预判）
 
 #### 5.主要场景的Action和API接口定义（伪代码）
