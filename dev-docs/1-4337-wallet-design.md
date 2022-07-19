@@ -8,12 +8,12 @@
 + 任何人可以免费下载Chrome插件，使用自己的合约钱包地址（无需事先建立，自动创建）接受资产。
 + 任何人都可以从github查看本钱包的所有源代码，以确保可以check安全性，也可以自己从源代码build自己的插件。
 + 可以选择不同网络（主网、Arbi、OP），从而链接不同的EntryPoint，但是钱包地址可以保持不变？
-+ 可以使用钱包的基本功能：
++ 可以使用钱包的基本功能场景：
 + Get：收取来自任何EOA 钱包或者Contract wallet合约钱包发送的ERC20或者ERC721、ERC1155等Token资产。
 + Send：Transfer自己用于的上述资产到任何EOA或者Contract wallet Account地址。
 + Gas：Transfer目前需要自己预先存储一定的ETH支付自己合约钱包交易的gasfee，未来引入paymaster。
 + Dapp：正常连接和使用Layer2的DApp，DApp需要引用4337提供的SDK，从而适配4337钱包的签名登录和交易发起。
-+ Recovery：选择Guradian（默认4337wallet官方团队是第一个），任何时间主动选择Recovery（通过link发送给Guardian）
++ Recovery：选择Guardian（默认4337wallet官方团队是第一个），任何时间主动选择Recovery（通过link发送给Guardian）
 + Programming：目前仅提供日限额模块加载到contract wallet，后续扩展此功能。
 + 其他常规Wallet的功能，例如交易的查看（链接到scan url），不再赘述。
 #### 2.MVP的使用形式、网络和基本要求
