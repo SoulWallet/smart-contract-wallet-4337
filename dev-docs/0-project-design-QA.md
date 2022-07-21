@@ -1,30 +1,41 @@
-### 4337项目设计分析阶段
+### 4337 Project Design Analysis Phase
 
-#### 一个Layer2合约钱包的Q&A
+#### A Q&A for a Layer 2 contract wallet
 
-1. 为啥不做Layer1的合约钱包？
-   - 为快速上线，MPV产品仅支持一个L2（optimism/arbitrum).
-2. Layer2的EntryPoint EF什么时间部署？这个是我们的依赖
-   - 在正式部署之前，我们的开发测试可以基于我们自己部署的Entrypoint测试开发
-   - 测试当然自己部署，需要确认EF部署的时间（方式？）
+1. Why not make a contract wallet for Layer 1?
+
+   - For quick launch, MPV products only support one L2 (optimism/arbitrum).
+
+2. When will the Layer2 EntryPoint EF be deployed? this is our dependency
+
+   - Before the official deployment, our development tests can be developed based on our own deployed Entrypoint tests
+   - Of course, the test is deployed by itself, and the time (method?) of the EF deployment needs to be confirmed.
    - " It'll be deployed on the optimistic rollups as soon as it's ready." @yoav
-3. 我们本次做的是最小可用钱包？需要定义面向客户的功能范围
-   [design doc](1-4337-wallet-design.md)
-4. 本次的技术方案选型
-Solidity+React+Chrome插件（node），Relay用Go（如果架构确认做Relay）
-5. 角色分工安排？
-产品嘉俊，架构jhf，合约+后端cejay，前端+插件：待招募，全栈偏前端：拆分钱包前后工作量，6人左右小团队
-6. 工作量评估：按优先级，拆分为5部分，在架构和设计完成后（预计3+1周左右），预留了3+2周开发+测试时间，这样下来大约3个月交付第一个版本的MVP
-会拆分后给出干特图排期
 
-7. 工程分析：5部分主要工作量
-   1. 对EIP4337协议的实现，不同链，可能有不同的tricks。这里讨论下，cejay说有最基础的实现，包括基础的js调用，那只需要增加一个日限额部分合约以及对应设置和触发过程基于4337合约模板，生成我们的合约钱包的code。
-      - 如果要实现日限额等高阶功能，我们可以参考下Gnosis，但是觉得可能这不是MVP版本的功能
-      - 可以讨论下，但感觉MVP实现contract wallet基础功能+social recovery+programing（日限额）是MVP要做的，不过可以评估工作量后，排个优先级。
-   2. 适配DApp的wrapper，用来链接钱包，输出常规的provider等接口服务。这个重要是参考这里：165改进为1271，https://docs.argent.xyz/wallet-connect-and-argent，另外要考虑架构上的考虑。是在浏览器实现侧完成适配，还是轻量改造DApp（引用我们提供的sdk，给出接口），需要讨论确定。
-      - EIP165是必须支持的（NFT收款的必要条件），EIP1271这个登录标准如果没有更大共识的标准EIP 我们也得实现
-      - Sorry，说错了，是要1271兼容191？还是升级原来的EOA签名协议？还没深入分析，看到需要实现signature aggregation，应该就是这部分工作，钱包要匹配签名算法集合（也包括升级EOA为兼容EOA的contract wallet算法？）
-   3. 一个类似Metamask的Chrome plugin，包括relay服务（可定制，复杂）这个要基于Argent看，有多少能用的，协议和指令部分估计用不上，交互界面和业务流程可以参考，是重要的工作，深入研究代码后，拆解，再讨论一次。
-   4. 一个用来示范如何连接使用wrapper的DApp demo。这个就用我们的ProofofSoul吧，也可以顺便改造一个版本
-   5. paymaster，工作量，可以后置（GSN基础上改造）paymaster目前计划滞后，先用测试网，然后使用entrypoint的预存来完成gas支付，如果0.1MVP，就是需要先预存ETH到合约钱包 后面再把paymaster做好（第三方代付支付）
+3. What are we doing this time is the smallest usable wallet? Need to define customer-facing functional scope [design doc](https://github.com/proofofsoulprotocol/smart-contract-wallet-4337/blob/main/dev-docs/1-4337-wallet-design.md)
 
+4. This time, the technical solution selection Solidity+React+Chrome plugin (node), Relay uses Go (if the architecture is confirmed to be Relay)
+
+5. Assignment of roles? Product Jiajun, architecture jhf, contract + back-end cejay, front-end + plugin: to be recruited, full-stack partial front-end: workload before and after splitting wallets, a small team of about 6 people
+
+6. Workload assessment: divided into 5 parts according to priority. After the architecture and design are completed (about 3+1 weeks are expected), 3+2 weeks of development + testing time are reserved, so that the first delivery will be delivered in about 3 months. Each version of the MVP will be split and the Gantt chart schedule will be given
+
+7. Engineering Analysis: 5 Major Workloads
+
+   1. For the implementation of the EIP4337 protocol, different chains may have different tricks. Discussed here, cejay said that there is the most basic implementation, including basic js calls, it only needs to add a daily limit to some contracts and the corresponding setting and triggering process is based on the 4337 contract template to generate the code of our contract wallet.
+
+      - If you want to implement high-level functions such as daily quota, we can refer to Gnosis, but I think this may not be the function of the MVP version
+      - It can be discussed, but I feel that MVP realizes the basic functions of contract wallet + social recovery + programming (daily limit) is what MVP needs to do, but you can evaluate the workload and prioritize.
+
+   2. The wrapper that adapts to DApp is used to link wallets and output regular provider and other interface services. This is important to refer to here: 165 is improved to 1271, 
+
+      https://docs.argent.xyz/wallet-connect-and-argent, and architectural considerations should also be considered. Whether to complete the adaptation on the browser implementation side, or to lightly transform the DApp (refer to the sdk provided by us and give the interface), needs to be discussed and determined.
+
+      - EIP165 must be supported (a necessary condition for NFT collection), EIP1271, the login standard, if there is no larger consensus standard EIP, we must also implement it
+      - Sorry, I'm wrong, do you want 1271 to be compatible with 191? Or upgrade the original EOA signature protocol? I haven’t analyzed it in depth yet, and I see that signature aggregation needs to be implemented, which should be this part of the work. The wallet must match the signature algorithm set (including upgrading EOA to the contract wallet algorithm compatible with EOA?)
+
+   3. A Chrome plugin similar to Metamask, including the relay service (customizable, complex). This depends on Argent, how many can be used, the protocol and instruction parts are estimated to be unusable, and the interactive interface and business process can be referred to, which is an important work. After digging into the code, tear it down, and discuss it again.
+
+   4. A DApp demo to demonstrate how to connect and use wrapper. Just use our ProofofSoul for this, or you can make a version by the way
+
+   5. paymaster, workload, can be post-installed (transformed on the basis of GSN) paymaster is currently planning to lag, first use the test network, and then use the pre-store of entrypoint to complete gas payment, if 0.1MVP, it is necessary to pre-store ETH to the contract wallet and then pay master Do it well (third-party payment)
