@@ -3,11 +3,11 @@
 #### 一个Layer2合约钱包的Q&A
 
 1. 为啥不做Layer1的合约钱包？
-   - 因为gas费的问题，L1可能不是优先推广的，但是也完整支持L1
-   - 那应该说我们本次是完成以太坊主网+Layer2（EVM兼容链）的合约钱包方式提供Account Abstract产品MVP。
+   - 为快速上线，MPV产品仅支持一个L2（optimism/arbitrum).
 2. Layer2的EntryPoint EF什么时间部署？这个是我们的依赖
    - 在正式部署之前，我们的开发测试可以基于我们自己部署的Entrypoint测试开发
    - 测试当然自己部署，需要确认EF部署的时间（方式？）
+   - " It'll be deployed on the optimistic rollups as soon as it's ready." @yoav
 3. 我们本次做的是最小可用钱包？需要定义面向客户的功能范围
    [design doc](1-4337-wallet-design.md)
 4. 本次的技术方案选型
