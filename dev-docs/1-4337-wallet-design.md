@@ -9,7 +9,7 @@
 + 任何人可以免费下载Chrome插件，使用自己的合约钱包地址（无需事先建立，自动创建）接受资产。
 + 任何人都可以从github查看本钱包的所有源代码，以确保可以check安全性，也可以自己从源代码build自己的插件。
 + 可以选择不同网络（主网、Arbi、OP），从而链接不同的EntryPoint，但是钱包地址可以保持不变？
-+ 可以使用钱包的基本功能：
++ 可以使用钱包的基本功能场景：
 + Get：收取来自任何EOA 钱包或者Contract wallet合约钱包发送的ERC20或者ERC721、ERC1155等Token资产。
 + Send：Transfer自己用于的上述资产到任何EOA或者Contract wallet Account地址。
 + Gas：Transfer目前需要自己预先存储一定的ETH支付自己合约钱包交易的gasfee，未来引入paymaster。
