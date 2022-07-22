@@ -5,6 +5,7 @@
 1. Why not make a contract wallet for Layer 1?
 
    - For quick launch, MPV products only support one L2 (optimism/arbitrum).
+   - fix: We build for all EVM adapted networks: both layer1 and layer2.
 
 2. When will the Layer2 EntryPoint EF be deployed? this is our dependency
 
@@ -16,7 +17,7 @@
 
 4. This time, the technical solution selection Solidity+React+Chrome plugin (node), Relay uses Go (if the architecture is confirmed to be Relay)
 
-5. Assignment of roles? Product Jiajun, architecture jhf, contract + back-end cejay, front-end + plugin: to be recruited, full-stack partial front-end: workload before and after splitting wallets, a small team of about 6 people
+5. Assignment of roles? Product Jiajun, architecture jhf, contract + back-end cejay, contract: David, front-end + plugin: fengji, full-stack + partial front-end: depend on Mask's help, a small team of about 6 people
 
 6. Workload assessment: divided into 5 parts according to priority. After the architecture and design are completed (about 3+1 weeks are expected), 3+2 weeks of development + testing time are reserved, so that the first delivery will be delivered in about 3 months. Each version of the MVP will be split and the Gantt chart schedule will be given
 
