@@ -2,12 +2,40 @@
  * @Author: jhfnetboy 
  * @Date: 2022-07-22 10:17:18 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-07-22 10:18:30
+ * @Last Modified time: 2022-07-25 12:12:47
  */
   
 # 4337 Technical Implementation Analysis
 + This article will analyze and preview the entire main technical process from the perspective of technical implementation.
-## Structure diagram of main scenarios and core technologies
+## Structure diagram of main scenarios
++ ![architecture](4337-product-architecture.drawio.png)
++ We can find many Entities and Lines which represents objects and relations.
++ Now we give a deification of this Objects and Relations.
+### User
++ Who focus on some features of Smart Contract Wallets.
++ ![features](feats.png)
++ He can easily find the Chrome extension in official links or search engines.
++ Follow the next to install and fast create his account.
++ So he must want the highlight words to tell him what you have got and what benefits you are enjoying.
++ Set his **guardians** and remember it to reset the private key.
++ His private key will save in local machine.
+### Plugin
++ It will not be very large and automate to update to new version.
++ It will give the owner some warnings or notifies to give advice and selections.
++ It give save mode or expert mode or some other modes for saving your time.
++ It will be Chrome and webkit engine browser adapted(Brave,Edge,Firefox...).
+### Entry Points
++ It will be EF official address and can be directly verified.
++ We will give a overview of the abilities.
+### Chain Network
++ It will be used on Layer1 (Mainnet) and Layer2(EVM adapted, Optimism, Arbitrum).
++ It won't need to select Chain Network? auto adapted and notify?
+### User
+### User
+### User
+### User
+### User
+
 ## The whole process of signing
 ## Other signature algorithms
 ## EOA and EIPS
@@ -24,28 +52,31 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1217.md
 ### Argent about
 inpage.model.ts
 
-EIP-747:
+#### EIP-747:
 
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-747.md
 
-EIP-3085
+#### EIP-3085
 
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 
-EIP-747:
+#### EIP-747:
 
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-747.md
 
-EIP-3085
+#### EIP-3085
 
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 
-wallet.service.ts
+#### EIP-2645
++ wallet.service.ts
++ from https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2645.md
++ It was published on 2020-05-13 and be stagnant, a ERC application layer.
 
-from https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2645.md
-
-m / purpose' / layer' / application' / eth_address_1' / eth_address_2' / index
-
+#### JWT
++ https://jwt.io/, IETF: https://tools.ietf.org/html/rfc7519
++ A JSON Object which after verified by server or on-chain contract, keeping in client(browser side), No status, No permission to store private data(must be encrypted).
++ ![JWT](jwt.png)
 ## EOA initiates transaction
 ## Transaction Links and MEVs
 ## 4337 Protocol Interpretation
