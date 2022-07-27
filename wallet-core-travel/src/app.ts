@@ -4,7 +4,7 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-06-22 16:15:42
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-26 10:52:31
+ * @LastEditTime: 2022-07-27 19:48:09
  */
 import Web3 from 'web3';
 import { Utils } from './utils/utils';
@@ -71,8 +71,8 @@ async function main() {
 
     const paymasterSignHash = getPayMasterSignHash(userOperation)
     console.log(`paymasterSignHash `, paymasterSignHash)
-    userOperation.paymasterData = signPayMasterHash(paymasterSignHash , process.env.PAYMASTER_SIGN_KEY as string)
-    console.log(`paymasterData `, userOperation.paymasterData )
+    userOperation.paymasterData = signPayMasterHash(paymasterSignHash, process.env.PAYMASTER_SIGN_KEY as string)
+    console.log(`paymasterData `, userOperation.paymasterData)
 
     userOperation.signature = signUserOp(userOperation, privateKey, chainId);
     console.log(`userOperation `, userOperation)
@@ -99,13 +99,13 @@ async function main() {
     const rawTx = {
         nonce: 10,
         chainId: chainId,
-        gasPrice:  web3.utils.numberToHex(web3.utils.toWei("8", 'gwei')),
+        gasPrice: web3.utils.numberToHex(web3.utils.toWei("8", 'gwei')),
         gasLimit: 3000000,
         to: EntryPointAddress,
-        data:  entrypointContract.methods.handleOps([userOperation], process.env.BENEFICIARY_ADDR).encodeABI()
+        data: entrypointContract.methods.handleOps([userOperation], process.env.BENEFICIARY_ADDR).encodeABI()
     }
     let tx = new Tx(rawTx)
-    let priv = new Buffer((process.env.SPONSER_KEY?.substring(2)) as string, 'hex')
+    let priv = Buffer.from((process.env.SPONSER_KEY?.substring(2)) as string, 'hex')
     tx.sign(priv)
     let serializedTx = tx.serialize()
     return new Promise(function (resolve, reject) {
