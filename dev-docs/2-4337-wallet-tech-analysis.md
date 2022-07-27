@@ -60,9 +60,10 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-747.md
 
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 
-#### EIP-747:
+#### EIP-2470:
 
-https://github.com/ethereum/EIPs/blob/master/EIPS/eip-747.md
++ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2470.md
++ Create2Factory?
 
 #### EIP-3085
 
@@ -72,6 +73,8 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 + wallet.service.ts
 + from https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2645.md
 + It was published on 2020-05-13 and be stagnant, a ERC application layer.
++ It seems needing to alter the GETH or other client's EVM OpCode to upgrade to support this EIP.
++ So...huge cost stop this.
 
 #### JWT
 + https://jwt.io/, IETF: https://tools.ietf.org/html/rfc7519
