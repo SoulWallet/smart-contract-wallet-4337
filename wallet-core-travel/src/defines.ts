@@ -13,7 +13,9 @@ export const AddressZero = '0x0000000000000000000000000000000000000000';
 /**
  * entry point contract address. singleton contract.(test address)
  */
-export const EntryPointAddress = '0xeC97dc3Ef34b876caA9CC3E7EF91DE0D66cd689F';
+export const EntryPointAddress = '0xC6ce731ED3b10E8D30643dB57c10AaC12858A7F1';
+
+export const PayMasterAddress = '0x98966f4DcbcF07D3A14c749BB68Ad97B9671C564';
 
 /**
  * create2factory address defined in eip-2470.
