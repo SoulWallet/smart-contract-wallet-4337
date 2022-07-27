@@ -89,6 +89,33 @@ export function packUserOp1(op: UserOperation): string {
   ])
 }
 
+
+export function getPayMasterSignHash(op: UserOperation): string {
+  return keccak256(defaultAbiCoder.encode([
+    'address', // sender
+    'uint256', // nonce
+    'bytes32', // initCode
+    'bytes32', // callData
+    'uint256', // callGas
+    'uint', // verificationGas
+    'uint', // preVerificationGas
+    'uint256', // maxFeePerGas
+    'uint256', // maxPriorityFeePerGas
+    'address', // paymaster
+  ], [
+    op.sender,
+    op.nonce,
+    keccak256(op.initCode),
+    keccak256(op.callData),
+    op.callGas,
+    op.verificationGas,
+    op.preVerificationGas,
+    op.maxFeePerGas,
+    op.maxPriorityFeePerGas,
+    op.paymaster,
+  ]))
+}
+
 export function getRequestId(op: UserOperation, chainId: number): string {
   const userOpHash = keccak256(packUserOp(op, true))
   const enc = defaultAbiCoder.encode(
@@ -100,6 +127,20 @@ export function getRequestId(op: UserOperation, chainId: number): string {
 
 export function signUserOp(op: UserOperation, privateKey: string, chainId: number): string {
   const message = getRequestId(op, chainId)
+  const msg1 = Buffer.concat([
+    Buffer.from('\x19Ethereum Signed Message:\n32', 'ascii'),
+    Buffer.from(arrayify(message))
+  ])
+
+  const sig = ecsign(keccak256_buffer(msg1), Buffer.from(arrayify(privateKey)))
+  // that's equivalent of:  await signer.signMessage(message);
+  // (but without "async"
+  const signedMessage1 = toRpcSig(sig.v, sig.r, sig.s);
+  return signedMessage1;
+}
+
+
+export function signPayMasterHash(message: string, privateKey: string): string {
   const msg1 = Buffer.concat([
     Buffer.from('\x19Ethereum Signed Message:\n32', 'ascii'),
     Buffer.from(arrayify(message))
