@@ -23,5 +23,6 @@ npm run start
    - ☑️	Social recovery
 
 ## Product and Process:
-Create and recover wallet
+### Create and recover wallet
+
 <img width="795" alt="image" src="https://user-images.githubusercontent.com/14859235/181730499-7ac2dc25-54ba-4224-8f05-c8c9cddcf1d0.png">
