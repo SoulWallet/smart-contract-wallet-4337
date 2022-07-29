@@ -4,7 +4,7 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-06-22 16:15:42
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-29 00:21:50
+ * @LastEditTime: 2022-07-29 11:39:28
  */
 import Web3 from 'web3';
 import { Utils } from './utils/utils';
@@ -99,7 +99,7 @@ async function main() {
 
 
     // #region EntryPoint
-    let entryPointAddress = '0x5eb364f6bA9aC8d43D90540Bf319a3feeE59A1c8';
+    let entryPointAddress = '0x1EDbE77CB07cE59Ef13E97EF0449D77B9fE5B0dC';
 
     if (!entryPointAddress) {
         const entryPointObj = await Utils.compileContract(`${__dirname}/contracts/EntryPoint.sol`, 'EntryPoint');
@@ -147,7 +147,7 @@ async function main() {
 
     // #region PayMaster
 
-    let payMasterAddress = '0xEaef8AE7d2A7Ff527F37083091C5C90F358158d9';
+    let payMasterAddress = '0x4276d31f838c59c4e8c18A716b49A04849BdE48F';
     if (!payMasterAddress) {
         // deploy PayMaster contract
         const payMasterObj = await Utils.compileContract(`${__dirname}/contracts/VerifyingPaymaster.sol`, 'VerifyingPaymaster');
@@ -195,7 +195,7 @@ async function main() {
         await Utils.signAndSendTransaction(web3,
             account_sponser.privateKey,
             payMasterAddress,
-            '0x00',
+            web3.utils.toHex(web3.utils.toWei("0.1", 'ether')),
             addStakeCallData);
     }
 

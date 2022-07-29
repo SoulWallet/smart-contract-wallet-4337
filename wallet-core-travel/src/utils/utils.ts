@@ -4,7 +4,7 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-06-22 16:15:42
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-28 23:19:59
+ * @LastEditTime: 2022-07-29 11:33:38
  */
 
 import { getCreate2Address, hexlify, hexZeroPad, keccak256 } from 'ethers/lib/utils';
@@ -64,6 +64,11 @@ export class Utils {
                 }
             },
             settings: {
+                optimizer: {
+                    enabled: true,
+                    runs: 200
+                },
+                evmVersion: 'london',
                 outputSelection: {
                     '*': {
                         '*': ['*']
@@ -72,6 +77,8 @@ export class Utils {
             }
         };
         console.log(`solc version:${solc.version()}`);
+
+        // enable optimizer 200  
         const output = JSON.parse(solc.compile(JSON.stringify(input)));
         const abi = output.contracts['contract.sol'][contractClassName].abi;
         const bytecode: string = output.contracts['contract.sol'][contractClassName].evm.bytecode.object;
@@ -168,10 +175,10 @@ export class Utils {
                 }
             });
             while (true) {
-                await Utils.sleep(1000 * 5);
+                await Utils.sleep(1000 * 1);
                 const receipt = await web3.eth.getTransactionReceipt(signedTransactionData.transactionHash);
                 if (receipt) {
-                    if (receipt.status===true) {
+                    if (receipt.status === true) {
                         if (to) {
                             return signedTransactionData.transactionHash;
                         } else {
