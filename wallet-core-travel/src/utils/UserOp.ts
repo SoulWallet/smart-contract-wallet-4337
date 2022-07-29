@@ -7,7 +7,6 @@ import { arrayify, defaultAbiCoder, keccak256 } from 'ethers/lib/utils'
 import { Wallet } from 'ethers'
 import { ecsign, toRpcSig, keccak256 as keccak256_buffer } from 'ethereumjs-util'
 import { UserOperation } from '../entity/userOperation'
-import { EntryPointAddress } from '../defines';
 
 function encode(typevalues: Array<{ type: string, val: any }>, forSignature: boolean): string {
   const types = typevalues.map(typevalue => typevalue.type === 'bytes' && forSignature ? 'bytes32' : typevalue.type)
@@ -116,17 +115,17 @@ export function getPayMasterSignHash(op: UserOperation): string {
   ]))
 }
 
-export function getRequestId(op: UserOperation, chainId: number): string {
+export function getRequestId(op: UserOperation, entryPointAddress: string, chainId: number): string {
   const userOpHash = keccak256(packUserOp(op, true))
   const enc = defaultAbiCoder.encode(
     ['bytes32', 'address', 'uint256'],
-    [userOpHash, EntryPointAddress, chainId])
+    [userOpHash, entryPointAddress, chainId])
   return keccak256(enc)
 }
 
 
-export function signUserOp(op: UserOperation, privateKey: string, chainId: number): string {
-  const message = getRequestId(op, chainId)
+export function signUserOp(op: UserOperation, entryPointAddress: string, chainId: number, privateKey: string): string {
+  const message = getRequestId(op, entryPointAddress, chainId)
   const msg1 = Buffer.concat([
     Buffer.from('\x19Ethereum Signed Message:\n32', 'ascii'),
     Buffer.from(arrayify(message))

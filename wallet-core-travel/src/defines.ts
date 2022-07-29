@@ -4,18 +4,18 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-07-26 10:08:48
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-26 10:13:02
+ * @LastEditTime: 2022-07-29 00:21:43
  */
 
 
 export const AddressZero = '0x0000000000000000000000000000000000000000';
 
-/**
- * entry point contract address. singleton contract.(test address)
- */
-export const EntryPointAddress = '0xC6ce731ED3b10E8D30643dB57c10AaC12858A7F1';
+// /**
+//  * entry point contract address. singleton contract.(test address)
+//  */
+// export const EntryPointAddress = '0x5eb364f6bA9aC8d43D90540Bf319a3feeE59A1c8';
 
-export const PayMasterAddress = '0x98966f4DcbcF07D3A14c749BB68Ad97B9671C564';
+// export const PayMasterAddress = '0xEaef8AE7d2A7Ff527F37083091C5C90F358158d9';
 
 /**
  * create2factory address defined in eip-2470.
