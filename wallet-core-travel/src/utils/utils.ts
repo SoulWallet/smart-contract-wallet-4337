@@ -4,7 +4,7 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-06-22 16:15:42
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-29 11:33:38
+ * @LastEditTime: 2022-07-31 23:30:36
  */
 
 import { getCreate2Address, hexlify, hexZeroPad, keccak256 } from 'ethers/lib/utils';
@@ -119,9 +119,9 @@ export class Utils {
         if (suggestedGasFees) {
             let f = suggestedGasFees[type];
             if (f && f.suggestedMaxPriorityFeePerGas && f.suggestedMaxFeePerGas && suggestedGasFees.estimatedBaseFee) {
-                const MaxPriority = f.suggestedMaxPriorityFeePerGas;
-                const Max = f.suggestedMaxFeePerGas;
-                const Base = suggestedGasFees.estimatedBaseFee;
+                const MaxPriority = Math.ceil(parseFloat(f.suggestedMaxPriorityFeePerGas)).toString();
+                const Max = Math.ceil(parseFloat(f.suggestedMaxFeePerGas)).toString();
+                const Base = Math.ceil(parseFloat(suggestedGasFees.estimatedBaseFee)).toString();
                 console.log(`Base:${Base} \t Max:${Max} \t MaxPriority:${MaxPriority}`);
                 const web3 = new Web3();
                 return {
@@ -148,7 +148,7 @@ export class Utils {
         privateKey: string,
         to: string | undefined,
         value: string,
-        data: string | undefined) {
+        data: string | undefined, callback?: (txhash: string) => void) {
         const chainId = await web3.eth.net.getId();
         const gasPrice = await Utils.getGasPrice(chainId);
         const account = web3.eth.accounts.privateKeyToAccount(privateKey);
@@ -166,6 +166,7 @@ export class Utils {
         rawTx.gas = web3.utils.toHex(web3.utils.toBN(gas)); // gas limit
         let signedTransactionData = await account.signTransaction(rawTx);
         if (signedTransactionData.rawTransaction && signedTransactionData.transactionHash) {
+            callback && callback(signedTransactionData.transactionHash);
             await web3.eth.sendSignedTransaction(signedTransactionData.rawTransaction, (err: any, hash: string) => {
                 if (err) {
                     console.log(err);

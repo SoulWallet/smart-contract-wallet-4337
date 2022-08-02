@@ -4,7 +4,7 @@
  * @Autor: z.cejay@gmail.com
  * @Date: 2022-06-22 16:15:42
  * @LastEditors: cejay
- * @LastEditTime: 2022-07-29 11:39:28
+ * @LastEditTime: 2022-08-02 11:55:34
  */
 import Web3 from 'web3';
 import { Utils } from './utils/utils';
@@ -12,8 +12,14 @@ import fs from 'fs';
 import { UserOperation } from './entity/userOperation';
 import { Create2Factory, AddressZero } from './defines';
 import { signUserOp, getRequestId, getPayMasterSignHash, signPayMasterHash } from './utils/UserOp';
+import WalletConnect from "@walletconnect/client";
+import { EIP1474_JSONRPC } from './entity/EIP1474_JSONRPC';
+import { execFromEntryPoint } from './ABI/execFromEntryPoint';
 import * as dotenv from 'dotenv';
 dotenv.config();
+
+
+
 
 async function main() {
 
@@ -225,28 +231,26 @@ async function main() {
 
     // get balance of simpleWallet
     let simpleWalletAddressBalance = parseFloat(web3.utils.fromWei(await web3.eth.getBalance(simpleWalletAddress)));
-    if (simpleWalletAddressBalance < 0.0001) {
+    if (simpleWalletAddressBalance < 0.1) {
         // send some ether to simpleWallet for test
         await Utils.signAndSendTransaction(web3,
             SPONSER_KEY,
             simpleWalletAddress,
-            web3.utils.toHex(web3.utils.toWei("0.0001", 'ether')),
+            web3.utils.toHex(web3.utils.toWei("0.1", 'ether')),
             undefined);
         simpleWalletAddressBalance = parseFloat(web3.utils.fromWei(await web3.eth.getBalance(simpleWalletAddress)));
-        if (simpleWalletAddressBalance < 0.0001) {
+        if (simpleWalletAddressBalance < 0.1) {
             throw new Error('simpleWalletAddressBalance is less than 0.0001');
         }
     }
 
+    const gasFee = await Utils.getGasPrice(chainId);
 
     let userOperation: UserOperation = new UserOperation();
 
     userOperation.sender = simpleWalletAddress;
-    userOperation.callGas = 3e6;
-    userOperation.verificationGas = 2e6;
-    userOperation.preVerificationGas = 1e6;
-    userOperation.maxFeePerGas = 10e9;
-    userOperation.maxPriorityFeePerGas = 10e9;
+    userOperation.maxFeePerGas = gasFee.Max;
+    userOperation.maxPriorityFeePerGas = gasFee.MaxPriority;
     userOperation.paymaster = payMasterAddress;
 
     if (await web3.eth.getCode(simpleWalletAddress) === '0x') {
@@ -258,77 +262,174 @@ async function main() {
         userOperation.nonce = parseInt(await simpleWalletContract.methods.nonce().call(), 10);
     }
 
-    //transfer ether from simpleWallet for test 
+    //transfer ether from simpleWallet for test
+    userOperation.callData = web3.eth.abi.encodeFunctionCall(
+        execFromEntryPoint,
+        [
+            account_sponser.address,
+            web3.utils.toHex(web3.utils.toWei("0.00001", 'ether')), "0x"
+        ]
+    );
+    await userOperation.estimateGas(web3, entryPointAddress);
 
-    const transferFromSimpleWalletBytecode = web3.eth.abi.encodeFunctionCall({
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "dest",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "value",
-                "type": "uint256"
-            },
-            {
-                "internalType": "bytes",
-                "name": "func",
-                "type": "bytes"
-            }
-        ],
-        "name": "execFromEntryPoint",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    }, [account_sponser.address, web3.utils.toHex(web3.utils.toWei("0.0001", 'ether')), "0x"]);
-
-    userOperation.callData = transferFromSimpleWalletBytecode;
-
-
-    // #region    paymaster sign request start
     const paymasterSignHash = getPayMasterSignHash(userOperation);
     console.log(`paymasterSignHash`, paymasterSignHash);
     userOperation.paymasterData = signPayMasterHash(paymasterSignHash, PAYMASTER_SIGN_KEY)
     console.log(`paymasterData`, userOperation.paymasterData);
-    // #endregion paymaster sign request end 
-
-
-    // #region    user sign start
     userOperation.signature = signUserOp(userOperation, entryPointAddress, chainId, account_user.privateKey);
-    // #endregion user sign end
 
-    const requestId = getRequestId(userOperation, entryPointAddress, chainId);//keccak256(abi.encode(userOp.hash(), address(this), block.chainid));
-
-    // userOperation2tuple
-    // const userOperation2tuple = `["${userOperation.sender}",${userOperation.nonce},"${userOperation.initCode}","${userOperation.callData}",${userOperation.callGas},${userOperation.verificationGas},${userOperation.preVerificationGas},${userOperation.maxFeePerGas},${userOperation.maxPriorityFeePerGas},"${userOperation.paymaster}","${userOperation.paymasterData}","${userOperation.signature}"]`;
-
-    // #region   paymaster send request start
     try {
         const result = await entryPointContract.methods.simulateValidation(userOperation).call({
             from: AddressZero
         });
         console.log(`simulateValidation result:`, result);
+        if (true) {
+            const handleOpsCallData = entryPointContract.methods.handleOps([userOperation], BENEFICIARY_ADDR).encodeABI();
+            const AASendTx = await Utils.signAndSendTransaction(web3,
+                SPONSER_KEY,
+                entryPointAddress,
+                '0x00',
+                handleOpsCallData);
+            console.log(`AASendTx:`, AASendTx);
+        }
     } catch (error) {
         console.error(error);
         throw new Error("simulateValidation error");
     }
-    // #endregion paymaster send request end
-    const handleOpsCallData = entryPointContract.methods.handleOps([userOperation], BENEFICIARY_ADDR).encodeABI();
-    await Utils.signAndSendTransaction(web3,
-        SPONSER_KEY,
-        entryPointAddress,
-        '0x00',
-        handleOpsCallData);
-    console.log(`handleOpsCallData:`, handleOpsCallData);
-
 
 
     // #endregion
 
 
 
+    // #region WalletConnect
+
+    // https://app.uniswap.org/#/swap?chain=ropsten
+    let uri = '';
+    console.log('Please set uri = the QR code URI content of the DAPP walletConnect[like:"wc:xxx..."]');
+    debugger;
+    if (!uri.startsWith('wc:')) {
+        throw new Error('you should use debuger console to set uri!');
+    }
+
+    // Create connector
+    const connector = new WalletConnect(
+        {
+            // Required
+            uri: uri,
+            // Required
+            clientMeta: {
+                description: "EIP-4337 Wallet Demo",
+                url: "https://eips.ethereum.org/EIPS/eip-4337",
+                icons: ["https://avatars.githubusercontent.com/u/107106051?s=200&v=4"],
+                name: "AA Wallet",
+            },
+        }
+    );
+
+    // Subscribe to session requests
+    connector.on("session_request", (error, payload) => {
+        if (error) {
+            throw error;
+        }
+        console.log('session_request');
+        console.log(payload);
+        connector.approveSession({
+            chainId: chainId,
+            accounts: [
+                simpleWalletAddress
+            ]
+        });
+
+    });
+
+    // Subscribe to call requests
+    connector.on("call_request", async (error, payload) => {
+        if (error) {
+            throw error;
+        }
+        console.log('call_request');
+        console.log(payload);
+        const jsonRPC = payload as EIP1474_JSONRPC; if (!jsonRPC) throw new Error('invalid jsonrpc');
+        const method = jsonRPC.method; if (!method) throw new Error('invalid method');
+        switch (method) {
+            case 'wallet_switchEthereumChain':
+                //throw new Error("the dApp is not support current chain");
+                break;
+            case 'eth_sendTransaction':
+                const params = jsonRPC.params; if (!params) throw new Error('invalid params');
+                const _tx: any = params[0]; if (!_tx) throw new Error('invalid tx');
+                //const _gas: string = _tx.gas; if (!_gas) throw new Error('invalid gas');
+                const _value: string = _tx.value; if (!_value) throw new Error('invalid value');
+                const _from: string = _tx.from; if (!_from) throw new Error('invalid from');
+                const _to: string = _tx.to; if (!_to) throw new Error('invalid to');
+                const _data: string = _tx.data; if (!_data) throw new Error('invalid data');
+
+                let userOperation: UserOperation = new UserOperation();
+
+                userOperation.sender = web3.utils.toChecksumAddress(_from);
+                userOperation.maxFeePerGas = gasFee.Max;
+                userOperation.maxPriorityFeePerGas = gasFee.MaxPriority;
+                userOperation.paymaster = payMasterAddress;
+                const _simpleWalletABI = simpleWalletObj.abi;
+                const simpleWalletContract = new web3.eth.Contract(_simpleWalletABI, simpleWalletAddress);
+                userOperation.nonce = parseInt(await simpleWalletContract.methods.nonce().call(), 10);
+
+
+                const transferFromSimpleWalletBytecode = web3.eth.abi.encodeFunctionCall(
+                    execFromEntryPoint,
+                    [
+                        web3.utils.toChecksumAddress(_to),
+                        _value,
+                        _data
+                    ]
+                );
+
+                userOperation.callData = transferFromSimpleWalletBytecode;
+                await userOperation.estimateGas(web3, entryPointAddress);
+
+                const paymasterSignHash = getPayMasterSignHash(userOperation);
+                userOperation.paymasterData = signPayMasterHash(paymasterSignHash, PAYMASTER_SIGN_KEY)
+                userOperation.signature = signUserOp(userOperation, entryPointAddress, chainId, account_user.privateKey);
+                try {
+                    const result = await entryPointContract.methods.simulateValidation(userOperation).call({
+                        from: AddressZero
+                    });
+                    console.log(`simulateValidation result:`, result);
+                } catch (error) {
+                    console.error(error);
+                    throw new Error("simulateValidation error");
+                }
+                const handleOpsCallData = entryPointContract.methods.handleOps([userOperation], BENEFICIARY_ADDR).encodeABI();
+                const AASendTx = await Utils.signAndSendTransaction(web3,
+                    SPONSER_KEY,
+                    entryPointAddress,
+                    '0x00',
+                    handleOpsCallData, async (txHash: string) => {
+                        // return tx result to DAPP 
+                        connector.approveRequest({
+                            id: payload.id,
+                            result: txHash
+                        });
+                    });
+                console.log(`AASendTx:`, AASendTx);
+
+
+                break;
+            default:
+                throw new Error("unknown method:" + method);
+        }
+
+    });
+
+    connector.on("disconnect", (error, payload) => {
+        if (error) {
+            throw error;
+        }
+        console.log('disconnect');
+    });
+
+    // #endregion
 
 
 }
