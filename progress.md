@@ -8,7 +8,7 @@
 + service for the team delivery @jhfnetboy
 
 ### Backend+Security center
-+ Email verify  Security center, backend job @Survivor
++ Email verify  Security center, backend job @jhfnetboy
 + 
 ### Soul wallet
 + @zeno UI,figma 
