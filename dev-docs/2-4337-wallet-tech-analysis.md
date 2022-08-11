@@ -30,24 +30,19 @@
 ### Chain Network
 + It will be used on Layer1 (Mainnet) and Layer2(EVM adapted, Optimism, Arbitrum).
 + It won't need to select Chain Network? auto adapted and notify?
-### User
-### User
-### User
-### User
-### User
 
 ## The whole process of signing
 ## Other signature algorithms
 ## EOA and EIPS
 + We find the EIPs implementing a basic EOA wallet.
-### 165
+### EIP165
 + To receive the NFT assets.
 + https://github.com/ethereum/EIPs/blob/master/EIPS/eip-165.md
-### 1193
+### EIP1193
 + To interact with the browser and implement a wallet
 + https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1193.md
 ## Account abstract EIPs
-### 1217?
+### EIP1217
 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1217.md
 ### Argent about
 inpage.model.ts
