@@ -30,11 +30,6 @@
 ### Chain Network
 + It will be used on Layer1 (Mainnet) and Layer2(EVM adapted, Optimism, Arbitrum).
 + It won't need to select Chain Network? auto adapted and notify?
-### User
-### User
-### User
-### User
-### User
 
 ## The whole process of signing
 ## Other signature algorithms
