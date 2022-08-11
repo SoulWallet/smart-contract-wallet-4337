@@ -86,3 +86,5 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 ## Security Center
 ### Email Service
 + ![email-flow](email-flow.png)
+## technical interaction
++ ![technology-flow1](technology-flow1.png)
