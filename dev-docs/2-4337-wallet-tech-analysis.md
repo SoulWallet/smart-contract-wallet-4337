@@ -82,7 +82,7 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 ## 4337 Tx execution process
 
 ## SoulWallet Main Compnent
-+ ![main-flow](main-flow.png)
++ ![main-flow](main-flow2.png)
 ## Security Center
 ### Email Service
 + ![email-flow](email-flow.png)
