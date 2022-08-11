@@ -85,3 +85,9 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 ## 4337 Protocol Interpretation
 ## Entryporint and Bundler
 ## 4337 Tx execution process
+
+## SoulWallet Main Compnent
++ ![main-flow](main-flow.png)
+## Security Center
+### Email Service
++ ![email-flow](email-flow.png)
