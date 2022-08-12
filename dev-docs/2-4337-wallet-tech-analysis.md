@@ -85,6 +85,7 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 
 ## SoulWallet Main Compnent
 + ![main-flow](main-flow2.png)
++ https://www.processon.com/diagraming/62f4c1280791292cb960eace
 ## Security Center
 ### Email Service
 + ![email-flow](email-flow.png)
