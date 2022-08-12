@@ -37,7 +37,7 @@
 ### Dev meeting 8-1? Template can be copy
 + 1. host: jhf
 + In this turn: 没空跳过
-+ ![turn](turn.png)
++ ![turn](dev-docs/turn.png)
 + 2. Action list
 + 1> Self check
 + slef check the progress is ok and show something(like results, prs or graph or anything)
