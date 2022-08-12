@@ -70,6 +70,8 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 + It was published on 2020-05-13 and be stagnant, a ERC application layer.
 + It seems needing to alter the GETH or other client's EVM OpCode to upgrade to support this EIP.
 + So...huge cost stop this.
++ The author was from starkware:
++ Tom Brand <tom@starkware.co>, Louis Guthmann <louis@starkware.co>
 
 #### JWT
 + https://jwt.io/, IETF: https://tools.ietf.org/html/rfc7519
