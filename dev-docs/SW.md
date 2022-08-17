@@ -24,11 +24,11 @@
 
 #### 检查Step
 
-SW user需要**记录**下来自己的合约钱包地址，这个可以发Email给自己，或者打印出来，或者加密记录到电脑。
+SoulWallet user需要**记录**下来自己的合约钱包地址，这个可以发Email给自己，或者打印出来，或者加密记录到电脑。
 
 还需要**记住**自己设置的Guardian，例如设置的Email、Twitter、可靠朋友的EOA，未来会提供默认Guardian服务，保障基础安全。
 
-这样才能确保可以到安全中心发起SW
+这样才能确保可以到安全中心发起SoulWallet
 
 
 
@@ -36,7 +36,7 @@ SW user需要**记录**下来自己的合约钱包地址，这个可以发Email�
 
 访问安全中心，输入Email（未来更多验证恢复方式），申请发送验证码，收到验证码输入到验证框，点击验证后自动发起恢复。
 
-对于忘记自己发起SW的验证邮箱的，未来提供单独依靠钱包地址申请Guardian恢复，提供可配置的3/6,5/8等不同安全级别保障。
+对于忘记自己发起SoulWallet的验证邮箱的，未来提供单独依靠钱包地址申请Guardian恢复，提供可配置的3/6,5/8等不同安全级别保障。
 
 
 
@@ -46,7 +46,7 @@ SW user需要**记录**下来自己的合约钱包地址，这个可以发Email�
 
 未来：Email、Tiwtter等类别Guardian，会使用DKIM和Tiwtter API 加密方式，获取指定邮件的Email回复或者Titter回复？
 
-Guardian地址可以选择SW user 私密存储，然后到安全中心提交地址恢复，也可以公开存储到链上，两种选择，目前公开。
+Guardian地址可以选择SoulWallet user 私密存储，然后到安全中心提交地址恢复，也可以公开存储到链上，两种选择，目前公开。
 
 
 
@@ -60,13 +60,13 @@ Guardian到安全中心后，查看发给自己的恢复交易，进行**签名*
 
 #### 执行Step
 
-安全中心判断**签名数量**符合，条件具备，生成**恢复按钮**，需要SW user 或者某Guardian点击。
+安全中心判断**签名数量**符合，条件具备，生成**恢复按钮**，需要SoulWallet user 或者某Guardian点击。
 
-点击后提交签名到合约，判断符合恢复条件，恢复新的**密钥对**给SW user，需要下载备份。
+点击后提交签名到合约，判断符合恢复条件，恢复新的**密钥对**给SoulWallet user，需要下载备份。
 
-恢复执行需要的Gasfee，可以是SW user预存在Paymaster的费用或者某个Guardian支付。
+恢复执行需要的Gasfee，可以是SoulWallet user预存在Paymaster的费用或者某个Guardian支付。
 
-PoC使用SW user预存Gasfee**代扣**进行恢复，未来支持Paymaster swap或者credicard或者某Guardian**代付**。
+PoC使用SoulWallet user预存Gasfee**代扣**进行恢复，未来支持Paymaster swap或者credicard或者某Guardian**代付**。
 
 
 
@@ -80,7 +80,7 @@ PoC使用SW user预存Gasfee**代扣**进行恢复，未来支持Paymaster swap�
 
 Swap：指定Token，Paymaster进行swap后代扣。
 
-最终不是SW user支付，就是利益相关方（Guardian好朋友或者DApp赞助方）
+最终不是SoulWallet user支付，就是利益相关方（Guardian好朋友或者DApp赞助方）
 
 
 
@@ -106,9 +106,10 @@ Guardian进行的是一次EOA的签名生成，是钱包插件提供的本地功
 
 
 
-#### 4.大家补充下
+#### 4.Flow图
+![sr-blow](SR-flow.jpg)
 
-图晚点画，累死
+
 
 
 
