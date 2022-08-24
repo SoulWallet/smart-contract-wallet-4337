@@ -87,7 +87,27 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md
 + ![main-flow](main-flow2.png)
 + https://www.processon.com/diagraming/62f4c1280791292cb960eace
 ## Security Center
-### Email Service
++ Verify user
++ Save relation
++ Recovery key
++ Guardian setting
+### Verify User Service
 + ![email-flow](email-flow.png)
++ 
+### Save relation
++ If user's email be verified, we must get and save user's relation.
++ 
+  ``` 
+  { 
+    "email": "testshuaishuai@gmail.com",
+    "wallet-address": "a contract wallet address",
+    "guardians": [{"type":"EOA","address":"0xbDA5747bFD65F08deb54cb465eB87D40e51B197E"},{},{}]
+  }
+  ```
+### Recovery key
++ It is a procedure :
++ verify email --> add a recover record{"email":"eee@gmail.com","recover-address": "contract wallet address", "status": "false"}
++ guardian login the security center, get the signature? verify and query the record to sign.
+### Guardian setting
 ## technical interaction
 + ![technology-flow1](technology-flow1.png)
