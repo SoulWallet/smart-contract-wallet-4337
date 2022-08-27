@@ -107,7 +107,9 @@ Guardian进行的是一次EOA的签名生成，是钱包插件提供的本地功
 
 
 #### 4.Flow图
-![sr-blow](SR-flow.jpg)
+![sr-flow](SR-flow.jpg)
+
 
 
 #### 5.其他
+
