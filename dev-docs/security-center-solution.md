@@ -51,8 +51,13 @@ Notify: sync or Aysnc , subscribe notify, notify formate same as Response
 
 ##### 恢复Key
 + 就是social recovery场景
++ list
++ 
 
 ##### 配置Guardian
++ default guardian
++ 2/3,4/6,ratio
++ 
 
 2.Social Recovery 第一个MVP版本流程确认，未来可迭代。
 
@@ -64,9 +69,10 @@ Notify: sync or Aysnc , subscribe notify, notify formate same as Response
 
 1.Docker化，内部Go手写
 
-2.AWS Lambda，只写核心，抽象后可以跨云迁移
+2.AWS Lambda，只写核心，抽象后可以跨云迁移,FAAS
 
 哪种更去中心化？更高效？更开发工作量少？可扩展？有手机版的Docker容器了么？
+Rory ok
 
 
 
