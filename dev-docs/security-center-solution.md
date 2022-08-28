@@ -41,7 +41,7 @@ Notify: sync or Aysnc , subscribe notify, notify formate same as Response
 + 从安全角度看，需要对存储的钱包地址进行加密？并非传输加密（传输加密采用OAuth2协议），是存储的就是加密内容，待定
 + guardians数据结构
 + [{"guardian_address":"EOA or contract wallet address",
-  + "guardian_signature":"public_key_signature to be verify"},{}]
++ "guardian_signature":"public_key_signature to be verify"},{}]
 
 Function: saveWAddress
 
@@ -82,7 +82,12 @@ Notify: sync or Aysnc , subscribe notify, notify formate same as Response
 + 
 + 2/3,4/6,guardian setting和ratio
 + Guardian设置目前只存储于安全中心，方便客户更改guardian配置，未来会用**不同子合约形式**，写入到合约中的安全配置
-+ 
++ {"max_gNumber":10, "min_gNumber":6, "verify_method":"signature", 
++ "guardians":[
++   {"guardian_address":"EOA or contract wallet address",
++   "guardian_signature":"public_key_signature to be verify"},{}]
++  }
++  verify_method, 未来支持例如twitter、 FB、微博、Email等Web2验证方式，目前只支持签名方式
 
 
 
