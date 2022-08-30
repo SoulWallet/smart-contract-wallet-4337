@@ -3,6 +3,8 @@
 + English for international communications.
 
 ## Meeting and notes
++ One by one host the meeting and take notes.
++ Turn: ![turn](dev-docs/turn.png)
 ### 8-1
 + kick off 
 + begin to design
@@ -21,28 +23,70 @@
 
 #### Meeting notes
 + contract_wallet_address，new_owner_address，change the contract wallet owner method's parameter.
-
 + Add method: getRecoveryStatus，for Robbie(frontend)
-
 + TODO: close recovery and clear the unfinished recovery record ,has not added yes
 + TODO: and keep compliance on contract level.
-
 + TODO: delete and edit, 2 of 4 APIs about guardians' CRUD
-
 + API add method: addGuardian（Robbie invoke after ABI return add guardian successfully ）
 + API add method: getGuardianStatus
-
 + Deployment： vercel first, haket？
 
 ### 8-30
-+ host: @xxxxx
++ host: @Robbie
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
 ### 8-30
-+ host: @xxxxx
++ host: @zeno
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
++ ### 8-30
++ host: @survivor
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
++ ### 8-30
++ host: @Davidding
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
+
+### 8-30
++ host: @cejay
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
+
+### 8-30
++ host: @rory?
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
+
+### 8-30
++ host: @jianyu?
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
+
+### 8-30
++ host: @zeno?
++ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
++ 3> Question fast discuss: technical questions and solution to discuss.
++ Copy these to next meeting notes.
+
+### 8-30
++ host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
