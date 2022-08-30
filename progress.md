@@ -127,7 +127,8 @@
 
 ### Wallet Bundler
 + Now do few jobs on this, to be extended.
-+ @cejay @Davidding, TODO
++ @cejay @Davidding
++ https://github.com/proofofsoulprotocol/paymaster-server
 
 ### Mobile Apps
 + In iOS and Android and other platforms, we invite our companion team: Astrox.
