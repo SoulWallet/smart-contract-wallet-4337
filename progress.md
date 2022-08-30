@@ -47,24 +47,7 @@
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
-### Dev meeting 8-1 Template can be copy
-+ 1. host: jhf
-+ ![turn](dev-docs/turn.png)
-+ 2. Action list
-+ 1> Self check
-+ slef check the progress is ok and show something(like results, prs or graph or anything)
-+ Plugin Frontend: page will be ok on Tuesday, Robbie,Rory?,
-+ 2> Question fast discuss
-+ jhf: hooks technical Q
-+ 插件的sdk，需要定下各个场景需要调用的链上交互，然后@0xRory rory需要帮忙说下常规的thirdweb hooks调用
-+ 我看了https://portal.thirdweb.com/react/react.useedition，一个是具体使用实例没有说，只给了返回的对象
-+ 另外说建议不要生产环境，我们要讨论下
-+ 
-+ 3>Milestone check
-+ 8-30: 
-+ 1>create\ activate\reovery basic flow will be done in draft, some difficult knot can be delay, but not more than 3 dots.
-+ 2>The technical design docs draft 0.1 make into gitbook? for early user to get basic information (or investors?), some Q&A like Aliance asked.
-+ 3>find the grant sponsor or other money and talking in progress at least, we will check for Plancker's help to finish it or not.
+
 ## SoulWallet components and team's role
 ### PD
 + User scenario define and logic define by @zengjiajun, who was the summoner.
