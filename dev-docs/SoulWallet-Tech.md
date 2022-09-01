@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-01 22:38:03
+ * @Last Modified time: 2022-09-01 22:45:26
  */
 
 ## SoulWallet technical abstraction
@@ -20,15 +20,15 @@
 + It has some components maybe like this:
 + ![](main-flow2.png)
 ### Social recovery
-+ The highlight, social recovery's flow draft flow is this:
++ The highlight, social recovery's draft flow  flow:
 + ![social recovery](SR-flow.jpg) 
 ### Security center
 + We need a security center to maintain the guardian settings and something else.
 + We will set the security center github repo to be open source, and anyone can run their own security center later.
++ Security center verify flow:
 + ![](email-flow.png)
-### Diagram
-+ !
-
++ Security center sequence diagram:
++ ![](recovery-sequence-diagram.png)
 
 ### Flow
 ### Technology
