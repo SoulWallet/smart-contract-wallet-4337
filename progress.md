@@ -31,12 +31,10 @@
 + API add method: getGuardianStatus
 + Deployment： vercel first, haket？
 
-### 8-30
-+ host: @Robbie
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
+### 9-1
+- welcome Xuri to join the team
+
+
 
 ### 8-30
 + host: @zeno
