@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-01 22:38:03
+ * @Last Modified time: 2022-09-02 19:43:41
  */
 
 ## SoulWallet technical abstraction
@@ -14,51 +14,74 @@
 + ![figure-43337](figure-4337.png)
 + We will have new features about multisig, [social recovery](https://vitalik.ca/general/2021/01/11/recovery.html).
 + We provide the ability of changing the control right of your wallet(secret key) within your social guardian's permission and without modifying anything of Ethereum. 
-+ 
++ Conception architecture：
++ ![SoulWallet architecture](4337-product-architecture.png)
 ### Contract wallet
 + We need a wallet product to realize the mission we talking above based on what [infinitism](https://github.com/eth-infinitism/account-abstraction) has done.
 + It has some components maybe like this:
 + ![](main-flow2.png)
++ 
 ### Social recovery
-+ The highlight, social recovery's flow draft flow is this:
++ The highlight, social recovery's draft flow  flow:
 + ![social recovery](SR-flow.jpg) 
 ### Security center
 + We need a security center to maintain the guardian settings and something else.
 + We will set the security center github repo to be open source, and anyone can run their own security center later.
-+ ![](email-flow.png)
-### Diagram
-+ !
++ Security center verify flow:
++ ![email-flow](email-flow.png)
++ Security center sequence:
++ ![recovery-sequence](recovery-sequence-diagram.png)
 
+### Paymaster
++ Deposit paymaster sequence:
++ ![deposit-paymaster](deposit-paymaster-diagram.png)
++ Verify paymaster sequence:
++ ![verify-paymaster](verify-paymaster-diagram.png)
 
-### Flow
-### Technology
-#### Implementations
-#### Invoke method
-
-#### Data formate
+### More docs
++ [walletcore-dataflow](EIP4337-walletcore-dataflow.md)
++ [social-recovery](Social-recovery-solution.md)
++ [security-center](security-center-solution.md)
++ [Paymaster](Paymaster.md)
++ Old docs:
++ [Design](1-4337-wallet-design.md)
++ [Analysis](2-4337-wallet-tech-analysis.md)
++ [Project](0-project-design-QA.md)
++ Progress:
++ [Progress](../progress.md)
+### Technical stack
++ Chrome plugin: Node.js/TS
++ Contract: Solidity
++ Security center: AWS Lambda /Node.js
++ 
 
 ### Scale and performance
++ All the repo of Github will be open source.
++ The contract will be deployed on Layer1 and Layer2, it depends on the Ethereum Sharding and more.
++ The Chrome plugin is depend on your local computer performance.
++ The Security center will be open source and decentralized by self-deployed.
++ It will be discussed in special topic later.
 ### Security and risk
-+ Welcome to give us any response for our MVP, or talking the detail of the product SoulWallet.
++ Welcome to giving us any response for our MVP, or talking the detail of the product SoulWallet.
 #### Security center
-##### 1. Risk:
+##### Risk 1
 It is a central application to service for the SoulWallet users, it a single point failure.
 + Bad: If the server is hacked and all data is leaked, the user's email and contract wallet address and guardian public key signature hash will be leaked, which will not directly cause customer losses.
 + Response: We will encrypted the data for leak risk. We will set monitor to block the malicious request(It depend on the request data and Model training). We build on OAuth2 and ECDSA to verify the good request.
 + 
-#### 2. Risk
+#### Risk 2
 + If the server is hijacked, fake API will get the above data of the customer, but the signature is encrypted hash and cannot be cracked?
 + Bad: 
-#### 3. Risk
+#### Risk 3
 + If the default Guardian is hacked with the private key hash or private key, it is a risk for the one with only one guardian, so it is safer to need at least 2 guardians.
-#### 4. Risk
+#### Risk 4
 + Therefore, for customers larger than 10000U, it is recommended to set both Web2+Web3 guardian, preferably 3/5, which is safer.
-#### 5. Risk
+#### Risk 5
 + And record the wallet and guardian address on the disconnected mobile phone by yourself, and restore it in mac+chrome environment when it is restored.
-#### 6. Risk 
+#### Risk 6
 + In addition, the private key can be recovered once on a regular basis, and the single-day limit+account-moving warning is set, so that the minimum loss is basically controlled, and the private key can be changed in time after being stolen, and the control right can be restored.
-#### 7. Risk 
-Large account, convenience and security are required. You can purchase officially audited security module+security service.
+#### Risk 7 
++ Large account, convenience and security are required. You can purchase officially audited security module+security service.
 ## Next step
 ### Tech stack
 + After the MVP delivery, we will build a small community to get the response and advice for SoulWallet, to get more ideas for product detail.
