@@ -70,54 +70,54 @@ Make up:
 2. When opening the guardian, you can initiate a call, send the local one to the API, and keep the synchronization updated.
 3.API method name update_guardians
 
-### 8-30
+### 9-6
 + host: @zeno
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
-+ ### 8-30
++ ### 9-8
 + host: @survivor
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
-+ ### 8-30
++ ### 9-9
 + host: @Davidding
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-13
 + host: @cejay
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-15
 + host: @rory?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-16
 + host: @jianyu?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-20
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-22
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
