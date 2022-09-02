@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-02 19:43:41
+ * @Last Modified time: 2022-09-02 19:49:40
  */
 
 ## SoulWallet technical abstraction
@@ -54,7 +54,10 @@
 + Contract: Solidity
 + Security center: AWS Lambda /Node.js
 + 
-
+### Product roadmap
++ 1. Signature aggregate.
++ 2. Default guardian and more guardian settings.
++ 3. @jiajun todo
 ### Scale and performance
 + All the repo of Github will be open source.
 + The contract will be deployed on Layer1 and Layer2, it depends on the Ethereum Sharding and more.
