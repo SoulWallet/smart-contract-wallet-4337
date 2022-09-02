@@ -31,12 +31,44 @@
 + API add method: getGuardianStatus
 + Deployment： vercel first, haket？
 
-### 8-30
+### 9-1
 + host: @Robbie
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
++ xuri(Tencent) and zhuxiao(Goolge) joined the dev group.
++ A quick introduction to the SoulWallet.
+### 9-2
++ host: @Robbie
++ Technical review 
++ note:
+
++ API
+- send email
+- save latest guardian list
+
++ Contract
+- Activate wallet
+- guardians(list, add, remove)
+
++ Design 
+- Sign transaction modal
+- Send
+
++ Product
+- assets erc20 whitelist
+
++ Frontend
+- activity history, click redirect to scan
+- save name locally
+- cache guardians list
+
+Lock wallet
+Initiate transaction page
+Nobody pays-show normal gas fee
+-Paymaster-show payer+0 gas fee
+ERC-20 token list can be written to death.
+Make up:
+1. when adding or decreasing the guardian, it is mainly to interact with the contract. after the completion, call back the API and send the latest email, wallet address and guardian list to the API for storage.
+2. When opening the guardian, you can initiate a call, send the local one to the API, and keep the synchronization updated.
+3.API method name update_guardians
 
 ### 8-30
 + host: @zeno
