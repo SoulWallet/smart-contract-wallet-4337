@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-04 20:31:27
+ * @Last Modified time: 2022-09-04 20:39:16
  */
 
 ## SoulWallet technical abstraction
@@ -47,6 +47,7 @@
 + [Design](1-4337-wallet-design.md)
 + [Analysis](2-4337-wallet-tech-analysis.md)
 + [Project](0-project-design-QA.md)
++ [China AMA](https://docs.google.com/presentation/d/1Nl_JPMbomqriaP2s3UXmtmnI_o3JmTi2aGg4zYvf5Ow/edit#slide=id.g1f87997393_0_1544)
 + Progress:
 + [Progress](../progress.md)
 ### Technical stack
@@ -149,3 +150,6 @@ It is a central application to service for the SoulWallet users, it a single poi
 + Yeah, we need money, but not so much for a small team.
 + Maybe we will raise a round for product version developing.
 + Contact @zengjiajun @jhfnetboy at twitter.
+
+## Quick view of SoulWallet
++ No Seed / No Gas / Full Control / Social Recovery / Programming
