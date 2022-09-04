@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-04 19:45:49
+ * @Last Modified time: 2022-09-04 20:31:27
  */
 
 ## SoulWallet technical abstraction
@@ -74,17 +74,24 @@ It is a central application to service for the SoulWallet users, it a single poi
 + 
 #### Risk 2
 + If the server is hijacked, fake API will get the above data of the customer, but the signature is encrypted hash and cannot be cracked?
-+ Bad: 
++ Bad: Because of the ON CHAIN contract hold the behavior of verifying the encrypted key, so fake API can do nothing(we will testify it).
++ Response: Improve the stability of the server side, reduce the ability of the Security center.
 #### Risk 3
-+ If the default Guardian is hacked with the private key hash or private key, it is a risk for the one with only one guardian, so it is safer to need at least 2 guardians.
++ If the default Guardian is hacked with the private key hash or private key, it is a risk for the one with only one guardian, so it is more safer to set at least 2 guardians.
++ Bad: Make user must set 2 guardians(totally 2) at least, or they may lost cause of default guardian. 
++ Response: Down the right of the default guardian, make it only can be triggered from user, do not have right to invoke the contract to replace the key.
 #### Risk 4
-+ Therefore, for customers larger than 10000U, it is recommended to set both Web2+Web3 guardian, preferably 3/5, which is safer.
++ Convenience and safety, users can't make a right choice in security settings.
++ Bad: they may lost convenience or security because of the wrong settings.
++ Response: Therefore, for customers hold large than 10000U, it is recommended to set both Web2+Web3 guardian, preferably 3/5, which is more safer. Or they can exchange convenience with safety by setting more audit rule in security center. We will offer security module for users later.
 #### Risk 5
 + And record the wallet and guardian address on the disconnected mobile phone by yourself, and restore it in mac+chrome environment when it is restored.
++ Bad: 
++ Response:
 #### Risk 6
-+ In addition, the private key can be recovered once on a regular basis, and the single-day limit+account-moving warning is set, so that the minimum loss is basically controlled, and the private key can be changed in time after being stolen, and the control right can be restored.
-#### Risk 7 
-+ Large account, convenience and security are required. You can purchase officially audited security module+security service.
++ If user lost the contract wallet address or guardians list, they can't revery their wallet anymore.
++ Bad: They will loss of property due to carelessness the record. 
++ Response: So we build the Security Center! record all above. in addition, the private key can be recovered once on a regular basis, and the single-day limit+account-moving warning is set, so that the minimum loss is basically controlled, and the private key can be changed in time after being stolen, and the control right can be restored.
 
 ## SoulWallet components and team's role
 ### PD
