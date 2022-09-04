@@ -2,7 +2,7 @@
  * @Author: jhfnetboy 
  * @Date: 2022-08-30 11:27:29 
  * @Last Modified by: jhfnetboy
- * @Last Modified time: 2022-09-02 19:49:40
+ * @Last Modified time: 2022-09-04 19:45:49
  */
 
 ## SoulWallet technical abstraction
@@ -85,6 +85,49 @@ It is a central application to service for the SoulWallet users, it a single poi
 + In addition, the private key can be recovered once on a regular basis, and the single-day limit+account-moving warning is set, so that the minimum loss is basically controlled, and the private key can be changed in time after being stolen, and the control right can be restored.
 #### Risk 7 
 + Large account, convenience and security are required. You can purchase officially audited security module+security service.
+
+## SoulWallet components and team's role
+### PD
++ User scenario define and logic define by @zengjiajun, who was the summoner.
+### PM
++ Service for the team delivery @jhfnetboy, who was a experienced guy on IT area.
+### Plugin
++ https://github.com/proofofsoulprotocol/soul-wallet-plugin
++ Plugin Hooks: will be draft define in monday, support basic hooks like utils, contact 
++ common query, jhf, Rory, cejay
++ @zeno Our designer, UI,figma , a cool guy.
++ @robbie Frontend plugin and invoke js sdk, a good boy.
+
+### Hooks
++ https://github.com/proofofsoulprotocol/soul-wallet-plugin/tree/main/src/sdk
++ Node.js npm package and signature and js sdk @cejay 
+### Security center
++ Backend Service: some basic service like Email verify, recovery execution and more.
++ Security center and more, backend job @jhfnetboy, yeah, also a fullstack engineer.
++ https://github.com/proofofsoulprotocol/soulwallet-backend
+### Wallet Contract Core
++ Wallet Contract Core: user case support,
++ @Davidding  a handsome dad who was a Solidity engineer.
++ @cejay ,a good man who was fullstack Web3 builder. 
++ https://github.com/proofofsoulprotocol/soul-wallet-contract
+### Wallet Core Lib
++ Wallet Core Lib(js SDK for Plugin invoke): following the contrace core, support user case to invoke, cejay
++ https://github.com/proofofsoulprotocol/soul-wallet-corelib
+
+### Wallet Paymaster
++ Wallet Paymaster: support user case, design and dev, contract coding
++ @cejay @Davidding
++ https://github.com/proofofsoulprotocol/paymaster-server
+
+### Wallet Bundler
++ Now do few jobs on this, to be extended.
++ @cejay @Davidding
++ https://github.com/proofofsoulprotocol/paymaster-server
+
+### Mobile Apps
++ In iOS and Android and other platforms, we invite our companion team: Astrox.
++ To finished the Mobile apps based on what we have done.
+
 ## Next step
 ### Tech stack
 + After the MVP delivery, we will build a small community to get the response and advice for SoulWallet, to get more ideas for product detail.
