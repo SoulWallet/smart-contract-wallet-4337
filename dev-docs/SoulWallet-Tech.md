@@ -56,9 +56,10 @@
 + Security center: AWS Lambda /Node.js
 + 
 ### Product roadmap
-+ 1. Signature aggregate.
++ 0. POC - basic wallet function that support erc-4337 with foucs on social recovery.
++ 1. Signature aggregation.
 + 2. Default guardian and more guardian settings.
-+ 3. @jiajun todo
++ 3. Paymaster enable protocol to pay for user's wallet creation and gas.
 ### Scale and performance
 + All the repo of Github will be open source.
 + The contract will be deployed on Layer1 and Layer2, it depends on the Ethereum Sharding and more.
