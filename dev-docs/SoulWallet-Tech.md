@@ -50,7 +50,7 @@
 + It will be modified timely.
 ### Conceptions
 + The article ([VB's article](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a))has told us : smart contract wallet, entrypoint contract, paymaster contract, bundler client and more, are build from the [EIP 4337](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md). 
-+ We can see this for a over review:
++ We can see this overview:
 + ![figure-43337](figure-4337.png)
 + We will have new features about multisig, [social recovery](https://vitalik.ca/general/2021/01/11/recovery.html).
 + We provide the ability of changing the control right of your wallet(secret key) within your social guardian's permission and without modifying anything of Ethereum. 
@@ -96,9 +96,10 @@
 + Security center: AWS Lambda /Node.js
 + 
 ### Product roadmap
-+ 1. Signature aggregate.
++ 0. POC - basic wallet function that support erc-4337 with foucs on social recovery.
++ 1. Signature aggregation.
 + 2. Default guardian and more guardian settings.
-+ 3. @jiajun todo
++ 3. Paymaster enable protocol to pay for user's wallet creation and gas.
 ### Scale and performance
 + All the repo of Github will be open source.
 + The contract will be deployed on Layer1 and Layer2, it depends on the Ethereum Sharding and more.
