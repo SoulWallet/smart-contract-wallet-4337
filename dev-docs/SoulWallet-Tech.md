@@ -5,6 +5,46 @@
  * @Last Modified time: 2022-09-04 20:39:16
  */
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [SoulWallet technical abstraction](#soulwallet-technical-abstraction)
+  - [Conceptions](#conceptions)
+  - [Contract wallet](#contract-wallet)
+  - [Social recovery](#social-recovery)
+  - [Security center](#security-center)
+  - [Paymaster](#paymaster)
+  - [More docs](#more-docs)
+  - [Technical stack](#technical-stack)
+  - [Product roadmap](#product-roadmap)
+  - [Scale and performance](#scale-and-performance)
+  - [Security and risk](#security-and-risk)
+    - [Risk 1](#risk-1)
+    - [Risk 2](#risk-2)
+    - [Risk 3](#risk-3)
+    - [Risk 4](#risk-4)
+    - [Risk 5](#risk-5)
+    - [Risk 6](#risk-6)
+- [SoulWallet team's role](#soulwallet-teams-role)
+  - [PD](#pd)
+  - [PM](#pm)
+  - [Plugin](#plugin)
+  - [Hooks](#hooks)
+  - [Security center](#security-center-1)
+  - [Wallet Contract Core](#wallet-contract-core)
+  - [Wallet Core Lib](#wallet-core-lib)
+  - [Wallet Paymaster](#wallet-paymaster)
+  - [Wallet Bundler](#wallet-bundler)
+  - [Mobile Apps](#mobile-apps)
+- [Next step](#next-step)
+  - [Tech stack](#tech-stack)
+  - [Team](#team)
+  - [Venture](#venture)
+- [Quick view of SoulWallet](#quick-view-of-soulwallet)
+
+<!-- /code_chunk_output -->
 ## SoulWallet technical abstraction
 + This document will show the technical solutions for team communications and partners' basic knowledge.
 + It will be modified timely.
@@ -68,8 +108,7 @@
 + It will be discussed in special topic later.
 ### Security and risk
 + Welcome to giving us any response for our MVP, or talking the detail of the product SoulWallet.
-#### Security center
-##### Risk 1
+#### Risk 1
 It is a central application to service for the SoulWallet users, it a single point failure.
 + Bad: If the server is hacked and all data is leaked, the user's email and contract wallet address and guardian public key signature hash will be leaked, which will not directly cause customer losses.
 + Response: We will encrypted the data for leak risk. We will set monitor to block the malicious request(It depend on the request data and Model training). We build on OAuth2 and ECDSA to verify the good request.
@@ -95,7 +134,7 @@ It is a central application to service for the SoulWallet users, it a single poi
 + Bad: They will loss of property due to carelessness the record. 
 + Response: So we build the Security Center! record all above. in addition, the private key can be recovered once on a regular basis, and the single-day limit+account-moving warning is set, so that the minimum loss is basically controlled, and the private key can be changed in time after being stolen, and the control right can be restored.
 
-## SoulWallet components and team's role
+## SoulWallet team's role
 ### PD
 + User scenario define and logic define by @zengjiajun, who was the summoner.
 ### PM
