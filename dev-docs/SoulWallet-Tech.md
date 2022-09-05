@@ -18,7 +18,6 @@
   - [Paymaster](#paymaster)
   - [More docs](#more-docs)
   - [Technical stack](#technical-stack)
-  - [Product roadmap](#product-roadmap)
   - [Scale and performance](#scale-and-performance)
   - [Security and risk](#security-and-risk)
     - [Risk 1](#risk-1)
@@ -39,6 +38,7 @@
   - [Wallet Bundler](#wallet-bundler)
   - [Mobile Apps](#mobile-apps)
 - [Next step](#next-step)
+  - [Product roadmap](#product-roadmap)
   - [Tech stack](#tech-stack)
   - [Team](#team)
   - [Venture](#venture)
@@ -94,12 +94,6 @@
 + Chrome plugin: Node.js/TS
 + Contract: Solidity
 + Security center: AWS Lambda /Node.js
-+ 
-### Product roadmap
-+ 0. POC - basic wallet function that support erc-4337 with foucs on social recovery.
-+ 1. Signature aggregation.
-+ 2. Default guardian and more guardian settings.
-+ 3. Paymaster enable protocol to pay for user's wallet creation and gas.
 ### Scale and performance
 + All the repo of Github will be open source.
 + The contract will be deployed on Layer1 and Layer2, it depends on the Ethereum Sharding and more.
@@ -177,6 +171,11 @@ It is a central application to service for the SoulWallet users, it a single poi
 + To finished the Mobile apps based on what we have done.
 
 ## Next step
+### Product roadmap
++ 0. POC - basic wallet function that support erc-4337 with foucs on social recovery.
++ 1. Signature aggregation.
++ 2. Default guardian and more guardian settings.
++ 3. Paymaster enable protocol to pay for user's wallet creation and gas.
 ### Tech stack
 + After the MVP delivery, we will build a small community to get the response and advice for SoulWallet, to get more ideas for product detail.
 + We will base on @Mask 's years technical accumulation to develop our product version.
