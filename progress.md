@@ -71,11 +71,23 @@ Make up:
 3.API method name update_guardians
 
 ### 9-6
-+ host: @zeno
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
++ host: @surrvivor
++ 1> Self check
++ David, uups proxy with openzepllin, init code replace with proxy, testing.
++ cejay, edit the backend of Robbie: example added, parse opcode to object for fronted.
++ jiajun, upgrade the figma of recovery flow: https://www.figma.com/file/pLBiwLUILaudvLxVmo7Msd/ERC-4337_Soul-Wallet?node-id=899%3A251
++ xuri: risk question, to be discussed
++ zeno: add design :https://www.figma.com/file/pLBiwLUILaudvLxVmo7Msd/ERC-4337_Soul-Wallet?node-id=899%3A251, fix signature page, TODO: transfer jiajun's figma into page
++ Robbie: signature method? personal sign or signV4? jiajun: sign msgs notify todo
++ finish half of create wallet procedure, it is ok.(activate need paymaster, bundler).
++ Survivor: xuri joined security center , look forward to next stage.
++ Xuri: some questions and alignment schedule,backend will delivery on 9-15
++ 
++ TODO: we will build a testnet and mainnet endpoint to virtually run contract for security testify.
++ 2> Risk
++ Xuri joined and improve the speed and down the risk of progress.
++ 3> Astrox meeting, record online video for 1.5 hour.
++ 
 + ### 9-8
 + host: @survivor
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
