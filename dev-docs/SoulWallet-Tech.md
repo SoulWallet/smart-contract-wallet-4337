@@ -130,15 +130,15 @@ It is a central application to service for the SoulWallet users, it a single poi
 
 ## SoulWallet team's role
 ### PD
-+ User scenario define and logic define by @zengjiajun, who was the summoner.
++ User scenario define and logic define by @zengjiajun, who is the founder.
 ### PM
 + Service for the team delivery @jhfnetboy, who was a experienced guy on IT area.
 ### Plugin
 + https://github.com/proofofsoulprotocol/soul-wallet-plugin
 + Plugin Hooks: will be draft define in monday, support basic hooks like utils, contact 
 + common query, jhf, Rory, cejay
-+ @zeno Our designer, UI,figma , a cool guy.
-+ @robbie Frontend plugin and invoke js sdk, a good boy.
++ @zeno Our designer, UI,figma.
++ @robbie Frontend plugin and invoke js sdk.
 
 ### Hooks
 + https://github.com/proofofsoulprotocol/soul-wallet-plugin/tree/main/src/sdk
