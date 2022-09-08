@@ -33,8 +33,10 @@
 
 ### 9-1
 + host: @Robbie
+- welcome Xuri to join the team
 + xuri(Tencent) and zhuxiao(Goolge) joined the dev group.
 + A quick introduction to the SoulWallet.
+
 ### 9-2
 + host: @Robbie
 + Technical review 
