@@ -32,58 +32,122 @@
 + Deployment： vercel first, haket？
 
 ### 9-1
++ host: @Robbie
 - welcome Xuri to join the team
++ xuri(Tencent) and zhuxiao(Goolge) joined the dev group.
++ A quick introduction to the SoulWallet.
 
+### 9-2
++ host: @Robbie
++ Technical review 
++ note:
 
++ API
+- send email
+- save latest guardian list
 
-### 8-30
-+ host: @zeno
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
-+ ### 8-30
-+ host: @survivor
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
-+ ### 8-30
++ Contract
+- Activate wallet
+- guardians(list, add, remove)
+
++ Design 
+- Sign transaction modal
+- Send
+
++ Product
+- assets erc20 whitelist
+
++ Frontend
+- activity history, click redirect to scan
+- save name locally
+- cache guardians list
+
+Lock wallet
+Initiate transaction page
+Nobody pays-show normal gas fee
+-Paymaster-show payer+0 gas fee
+ERC-20 token list can be written to death.
+Make up:
+1. when adding or decreasing the guardian, it is mainly to interact with the contract. after the completion, call back the API and send the latest email, wallet address and guardian list to the API for storage.
+2. When opening the guardian, you can initiate a call, send the local one to the API, and keep the synchronization updated.
+3.API method name update_guardians
+
+### 9-6
++ host: @surrvivor
++ 1> Self check
++ David, uups proxy with openzepllin, init code replace with proxy, testing.
++ cejay, edit the backend of Robbie: example added, parse opcode to object for fronted.
++ jiajun, upgrade the figma of recovery flow: https://www.figma.com/file/pLBiwLUILaudvLxVmo7Msd/ERC-4337_Soul-Wallet?node-id=899%3A251
++ xuri: risk question, to be discussed
++ zeno: add design :https://www.figma.com/file/pLBiwLUILaudvLxVmo7Msd/ERC-4337_Soul-Wallet?node-id=899%3A251, fix signature page, TODO: transfer jiajun's figma into page
++ Robbie: signature method? personal sign or signV4? jiajun: sign msgs notify todo
++ finish half of create wallet procedure, it is ok.(activate need paymaster, bundler).
++ Survivor: xuri joined security center , look forward to next stage.
++ Xuri: some questions and alignment schedule,backend will delivery on 9-15
++ 
++ TODO: we will build a testnet and mainnet endpoint to virtually run contract for security testify.
++ 2> Risk
++ Xuri joined and improve the speed and down the risk of progress.
++ 3> Astrox meeting, record online video for 1.5 hour.
++ 
++ ### 9-8
++ host: @jiajun
++ 1> Self check: 
+```
+Jiao: beanstalk effect okay；; Basic technology stack OK; Realize with the rising sun from front to back; 9.15 All APIs can be written;
+
+Shengjie: The simplest version of Paymaster can be realized in these two days;
+
+David: entry point is changing, and poc is based on the audited version;
+
+Robbie: The implementation of zeno core design draft is almost finished.
+
+Zeno：wallet recovery design draft has been completed; To be supplemented by edge case.
+
+Xuri: look at the available schemes in the database; The security scheme is tentative JWT, and the back-end is developed with jiao.
+
+Todo: Look for mask related videos.
+```
++ 2> Milestone check: 
++ The progress seems ok, we will hit the schedule.
++ 3> Question fast discuss:
++ we hold a quick meeting in the morning.
++ ### 9-9
 + host: @Davidding
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-13
 + host: @cejay
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
-+ host: @rory?
+### 9-15
++ host: @??
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
-+ host: @jianyu?
+### 9-16
++ host: @??
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-20
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 8-30
+### 9-22
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
