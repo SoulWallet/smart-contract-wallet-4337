@@ -89,11 +89,27 @@ Make up:
 + 3> Astrox meeting, record online video for 1.5 hour.
 + 
 + ### 9-8
-+ host: @survivor
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
++ host: @jiajun
++ 1> Self check: 
+```
+Jiao: beanstalk effect okay；; Basic technology stack OK; Realize with the rising sun from front to back; 9.15 All APIs can be written;
+
+Shengjie: The simplest version of Paymaster can be realized in these two days;
+
+David: entry point is changing, and poc is based on the audited version;
+
+Robbie: The implementation of zeno core design draft is almost finished.
+
+Zeno：wallet recovery design draft has been completed; To be supplemented by edge case.
+
+Xuri: look at the available schemes in the database; The security scheme is tentative JWT, and the back-end is developed with jiao.
+
+Todo: Look for mask related videos.
+```
++ 2> Milestone check: 
++ The progress seems ok, we will hit the schedule.
++ 3> Question fast discuss:
++ we hold a quick meeting in the morning.
 + ### 9-9
 + host: @Davidding
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
@@ -109,14 +125,14 @@ Make up:
 + Copy these to next meeting notes.
 
 ### 9-15
-+ host: @rory?
++ host: @??
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
 ### 9-16
-+ host: @jianyu?
++ host: @??
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
