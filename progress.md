@@ -17,19 +17,22 @@
 ### 8-17
 + Security center diagram discussion.
 + Frontend 60%
++ More detail: https://github.com/proofofsoulprotocol/smart-contract-wallet-4337/blob/main/dev-docs/security-center-solution.md
 
 ### 8-29
 + Social recovery sequence diagram discussion.
++ More detail: https://github.com/proofofsoulprotocol/smart-contract-wallet-4337/blob/main/dev-docs/Social-recovery-solution.md
 
-#### Meeting notes
-+ contract_wallet_address，new_owner_address，change the contract wallet owner method's parameter.
-+ Add method: getRecoveryStatus，for Robbie(frontend)
-+ TODO: close recovery and clear the unfinished recovery record ,has not added yes
-+ TODO: and keep compliance on contract level.
-+ TODO: delete and edit, 2 of 4 APIs about guardians' CRUD
-+ API add method: addGuardian（Robbie invoke after ABI return add guardian successfully ）
-+ API add method: getGuardianStatus
-+ Deployment： vercel first, haket？
+```
+contract_wallet_address，new_owner_address，change the contract wallet owner method's parameter.
+Add method: getRecoveryStatus，for Robbie(frontend)
+TODO: close recovery and clear the unfinished recovery record ,has not added yes
+TODO: and keep compliance on contract level.
+TODO: delete and edit, 2 of 4 APIs about guardians' CRUD
+API add method: addGuardian（Robbie invoke after ABI return add guardian successfully ）
+API add method: getGuardianStatus
+Deployment： vercel first, haket？
+```
 
 ### 9-1
 + host: @Robbie
