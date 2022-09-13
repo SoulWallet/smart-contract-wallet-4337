@@ -115,7 +115,17 @@ Todo: Look for mask related videos.
 + 3> Question fast discuss:
 + we hold a quick meeting in the morning.
 + ### 9-9
-+ host: @Davidding
++ host: @xuri，survivor
++ Talk about backend dev
+```
+1. the generation and communication mechanism of 1.JWT, todo, and robbie confirm
+2. Every time guardian signs on the chain? Holy communication = save, two have been changed, to be confirmed.
+
+3.guardian setting will mainly store contracts on the chain in the future, and the security centers will be synchronized to be communicated.
+4.response I changed the format and then changed it.
+
+5.add guardian setting in user obj
+```
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
