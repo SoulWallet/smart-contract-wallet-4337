@@ -40,8 +40,7 @@
 ### 9-2
 + host: @Robbie
 + Technical review 
-+ note:
-
+```
 + API
 - send email
 - save latest guardian list
@@ -57,7 +56,7 @@
 + Product
 - assets erc20 whitelist
 
-+ Frontend
+Frontend
 - activity history, click redirect to scan
 - save name locally
 - cache guardians list
@@ -71,6 +70,7 @@ Make up:
 1. when adding or decreasing the guardian, it is mainly to interact with the contract. after the completion, call back the API and send the latest email, wallet address and guardian list to the API for storage.
 2. When opening the guardian, you can initiate a call, send the local one to the API, and keep the synchronization updated.
 3.API method name update_guardians
+```
 
 ### 9-6
 + host: @surrvivor
