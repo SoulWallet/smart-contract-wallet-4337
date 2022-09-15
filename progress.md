@@ -5,14 +5,22 @@
 ## Meeting and notes
 + One by one host the meeting and take notes.
 + Turn: ![turn](dev-docs/turn.png)
+
+### TODO and check
+#### Paymaster design and solution : Daivd? Cejay?
+#### Bundler design and solution : Daivd? Cejay?
+#### Mask's old meeting record: jiajun
+
 ### 8-1
 + kick off 
 + begin to design
 
 ### 8-9
 + note:
-+ 1. Create senario, activate senario，明天过，争取场景讨论清楚，技术实现伪函数
-+ 2. Paymaster ability：测试网，补贴ETH，paymaster代付；正式网络优先级P2，0X协议swap ERC20 Token
+```
+Create senario, activate senario，discuss tomorror and produce the fake method.
+Paymaster ability：Testnet and pension for gasfee，paymaster to pay gasfee，0Xswap ERC20 Token
+```
 
 ### 8-17
 + Security center diagram discussion.
