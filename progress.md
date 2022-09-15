@@ -10,6 +10,7 @@
 #### Paymaster design and solution : Daivd? Cejay?
 #### Bundler design and solution : Daivd? Cejay?
 #### Mask's old meeting record: jiajun
+#### Talk about the 3 risk areas and 6 significant risks or chanllenges: jhf and xuri
 
 ### 8-1
 + kick off 
