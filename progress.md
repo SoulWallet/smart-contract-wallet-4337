@@ -7,10 +7,10 @@
 + Turn: ![turn](dev-docs/turn.png)
 
 ### TODO and check
-#### Paymaster design and solution : Daivd? Cejay?
-#### Bundler design and solution : Daivd? Cejay?
-#### Mask's old meeting record: jiajun
-#### Talk about the 3 risk areas and 6 significant risks or chanllenges: jhf and xuri
+#### 1.Paymaster design and solution : Daivd? Cejay?
+#### 2.Bundler design and solution : Daivd? Cejay?
+#### 3.Mask's old meeting record: jiajun
+#### 4.Talk about the 3 risk areas and 6 significant risks or chanllenges: jhf and xuri
 
 ### 8-1
 + kick off 
