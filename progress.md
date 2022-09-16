@@ -175,11 +175,14 @@ On the 16th, comprehensive joint debugging began;
 + Copy these to next meeting notes.
 
 ### 9-16
-+ host: @??
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
++ host: @zhangshengjie
++ zhangshengjie:WETHPaymaster now is draft, the user can use weth pay gas when deploy wallet(will different wallet address on different chainid,but can solved after poc). and build a (ethereum event listener)[https://hub.docker.com/r/cejay/ethereum-events]
++ jiao:Security center completed,to be in integrated test state
++ robbie:signature pop-up window and notification logic completed, @Jiajun needs to confirm the notification logic again
++ xuri:change website host to our domain name.
++ david:check out wethpaymaster this weekend.
++ zeno:use zero-code to build official website.
++ jiajun zeng:gas fee problem, POC does not allow users to customize gas fee.
 
 ### 9-20
 + host: @zeno?
