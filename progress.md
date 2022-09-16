@@ -176,7 +176,7 @@ On the 16th, comprehensive joint debugging began;
 
 ### 9-16
 + host: @zhangshengjie
-+ zhangshengjie:WETHPaymaster now is draft, the user can use weth pay gas when deploy wallet(will different wallet address on different chainid,but can solved after poc). and build a (ethereum event listener)[https://hub.docker.com/r/cejay/ethereum-events]
++ zhangshengjie:WETHPaymaster now is draft, the user can use weth pay gas when deploy wallet(will different wallet address on different chainid,but can solved after poc). and build a [ethereum event listener](https://hub.docker.com/r/cejay/ethereum-events)
 + jiao:Security center completed,to be in integrated test state
 + robbie:signature pop-up window and notification logic completed, @Jiajun needs to confirm the notification logic again
 + xuri:change website host to our domain name.
