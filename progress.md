@@ -184,6 +184,67 @@ On the 16th, comprehensive joint debugging began;
 + zeno:use zero-code to build official website.
 + jiajun zeng:gas fee problem, POC does not allow users to customize gas fee.
 
+### 9-17
++ host：jhf
++ Debug and code review
+
+```
+Evening API joint debugging +review note:
+
+1.code returns
+
+Fix, wait for the rising sun pr merge
+
+2.page paging problem (all scenarios)
+
+Todo, it's not resolved this time.
+
+3.email and recovery record
+
+Email has been added in model, wallet address has been removed this time, and submission requirements will be seen in the future, half of todo, to be seen, xuri.
+
+4.server side
+
+Todo, you need to add a trigger method of paymaster, and call the http method of paymaster with parameters.
+
+5. Improve the array index mode of add guardian
+
+todo，jhf
+
+6.package.json, node.js and npm versions are written
+
+todo，xuri
+
+7.soulwallet addon domain, plus https
+
+todo，xuri
+
+8. Universal verification code
+
+todo，888888，xuri
+
+9. Add a delete guardian api
+
+todo，jhf
+
+10. code+email of addaccount is generated directly.
+
+Todo, improve addAccount,jhf
+
+11.code+AddRecovery improvement
+
+todo，xuri
+
+12. common-util api of jwt
+
+Todo, xuri, added in two places (app.js has comments)
+
+13. Future todo
+
+Or lost JWT problem after changing computers.
+```
++ Check it later
+
 ### 9-20
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
