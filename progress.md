@@ -248,7 +248,76 @@ Or lost JWT problem after changing computers.
 ### 9-20
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
+```
+host: 
+@ZENO
+
+1.debug time：start from 20:30 20/09
+2. 
+@Jiajun Zeng
+ slogan and description
+3. 
+@ZENO
+ homepage web design
+ ----
+progress  plus:
+1.addRecoveryRecord, need to check the duplicate, and return that it has been submitted.
+
+todo，xuri
+
+2.JWT middleware verifies whether JWT is legal.
+
+xuri，todo
+
+**3.code+AddRecovery improvement * *
+
+todo，xuri
+
+**4. Add a delete guardian api**
+
+ok，jhf
+
+**5.server side * *
+
+Todo, jhf, you need to add a trigger method of paymaster, and call the http method of paymaster with parameters.
+
+**6. Improve the array index mode of add guardian * *
+
+ok，jhf
+
+7.fetchRecoveryRecords, you need to add a query guardian-setting.
+
+Returned to Robbie: total: 5, min: 3, and now 2 have been signed
+
+ok，jhf
+
+```
+
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
+```
+437 Follow-up Plan
+
+-Enter the joint debugging stage of all modules, and be online for 2-3 hours every night (robbie+jhf+ Rising Sun+Holy+others are online at any time). The goal is to complete the joint debugging before 9-30, and 80% of all problems arising will be solved.
+-Related domain names (jiajun+robbie+xuri), publishing (holy +xuri+ plugin Robbie? ), presentation preparation (jiajun+all), and preparation for list(all) begins before the festival, with division of labor.
+-recovery process demonstration, dapp interaction (1271)? Do plug-in support? Mobile phone client?
+-App's Astrox cooperation is very good, ABI, API and process are open to them, the target APK version is guaranteed, the beta version of iOS is released, and the process and plug-in version are 80% consistent.
+-Conduct a demo demonstration simulation internally during the National Day.
+-other TODO should be pushed forward, and there should be no action or any feedback week after week.
+After-10-10, it is planned to carry out two weeks of product roadmap design+technology stack exploration pre-research, and determine the goal and play method of the next iteration cycle.
+-Start the second iteration cycle (3 months) at the end of October, and maneuver for one week.
+-After mid-October, Rory will look at his situation and plan to work part-time in the whole stack (front and back work). Others will look at target delineation and technology stack exploration, and the visual inspection team will not make major adjustments.437 Follow-up Plan
+
+-Enter the joint debugging stage of all modules, and be online for 2-3 hours every night (robbie+jhf+ Rising Sun+Holy+others are online at any time). The goal is to complete the joint debugging before 9-30, and 80% of all problems arising will be solved.
+-Related domain names (jiajun+robbie+xuri), publishing (holy +xuri+ plugin Robbie? ), presentation preparation (jiajun+all), and preparation for list(all) begins before the festival, with division of labor.
+-recovery process demonstration, dapp interaction (1271)? Do plug-in support? Mobile phone client?
+-App's Astrox cooperation is very good, ABI, API and process are open to them, the target APK version is guaranteed, the beta version of iOS is released, and the process and plug-in version are 80% consistent.
+-Conduct a demo demonstration simulation internally during the National Day.
+-other TODO should be pushed forward, and there should be no action or any feedback week after week.
+After-10-10, it is planned to carry out two weeks of product roadmap design+technology stack exploration pre-research, and determine the goal and play method of the next iteration cycle.
+-Start the second iteration cycle (3 months) at the end of October, and maneuver for one week.
+-After mid-October, Rory will look at his situation and plan to work part-time in the whole stack (front and back work). Others will look at target delineation and technology stack exploration, and the visual inspection team will not make major adjustments.
+
+```
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
