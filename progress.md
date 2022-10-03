@@ -321,9 +321,12 @@ After-10-10, it is planned to carry out two weeks of product roadmap design+tech
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 9-22
-+ host: @zeno?
+### 9-22 -- 10-7
++ host: @Robbie
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ We have steppted into the debugging phase, so we meet every day and night to delivery the demo until 10-7.
++ Have no time to write much and todo list will show the public later.
++ 
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
