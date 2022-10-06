@@ -175,22 +175,158 @@ On the 16th, comprehensive joint debugging began;
 + Copy these to next meeting notes.
 
 ### 9-16
-+ host: @??
-+ 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
-+ 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
-+ 3> Question fast discuss: technical questions and solution to discuss.
-+ Copy these to next meeting notes.
++ host: @zhangshengjie
++ zhangshengjie:WETHPaymaster now is draft, the user can use weth pay gas when deploy wallet(will different wallet address on different chainid,but can solved after poc). and build a [ethereum event listener](https://hub.docker.com/r/cejay/ethereum-events)
++ jiao:Security center completed,to be in integrated test state
++ robbie:signature pop-up window and notification logic completed, @Jiajun needs to confirm the notification logic again
++ xuri:change website host to our domain name.
++ david:check out wethpaymaster this weekend.
++ zeno:use zero-code to build official website.
++ jiajun zeng:gas fee problem, POC does not allow users to customize gas fee.
+
+### 9-17
++ host：jhf
++ Debug and code review
+
+```
+Evening API joint debugging +review note:
+
+1.code returns
+
+Fix, wait for the rising sun pr merge
+
+2.page paging problem (all scenarios)
+
+Todo, it's not resolved this time.
+
+3.email and recovery record
+
+Email has been added in model, wallet address has been removed this time, and submission requirements will be seen in the future, half of todo, to be seen, xuri.
+
+4.server side
+
+Todo, you need to add a trigger method of paymaster, and call the http method of paymaster with parameters.
+
+5. Improve the array index mode of add guardian
+
+todo，jhf
+
+6.package.json, node.js and npm versions are written
+
+todo，xuri
+
+7.soulwallet addon domain, plus https
+
+todo，xuri
+
+8. Universal verification code
+
+todo，888888，xuri
+
+9. Add a delete guardian api
+
+todo，jhf
+
+10. code+email of addaccount is generated directly.
+
+Todo, improve addAccount,jhf
+
+11.code+AddRecovery improvement
+
+todo，xuri
+
+12. common-util api of jwt
+
+Todo, xuri, added in two places (app.js has comments)
+
+13. Future todo
+
+Or lost JWT problem after changing computers.
+```
++ Check it later
 
 ### 9-20
 + host: @zeno?
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
+```
+host: 
+@ZENO
+
+1.debug time：start from 20:30 20/09
+2. 
+@Jiajun Zeng
+ slogan and description
+3. 
+@ZENO
+ homepage web design
+ ----
+progress  plus:
+1.addRecoveryRecord, need to check the duplicate, and return that it has been submitted.
+
+todo，xuri
+
+2.JWT middleware verifies whether JWT is legal.
+
+xuri，todo
+
+**3.code+AddRecovery improvement * *
+
+todo，xuri
+
+**4. Add a delete guardian api**
+
+ok，jhf
+
+**5.server side * *
+
+Todo, jhf, you need to add a trigger method of paymaster, and call the http method of paymaster with parameters.
+
+**6. Improve the array index mode of add guardian * *
+
+ok，jhf
+
+7.fetchRecoveryRecords, you need to add a query guardian-setting.
+
+Returned to Robbie: total: 5, min: 3, and now 2 have been signed
+
+ok，jhf
+
+```
+
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
+```
+437 Follow-up Plan
+
+-Enter the joint debugging stage of all modules, and be online for 2-3 hours every night (robbie+jhf+ Rising Sun+Holy+others are online at any time). The goal is to complete the joint debugging before 9-30, and 80% of all problems arising will be solved.
+-Related domain names (jiajun+robbie+xuri), publishing (holy +xuri+ plugin Robbie? ), presentation preparation (jiajun+all), and preparation for list(all) begins before the festival, with division of labor.
+-recovery process demonstration, dapp interaction (1271)? Do plug-in support? Mobile phone client?
+-App's Astrox cooperation is very good, ABI, API and process are open to them, the target APK version is guaranteed, the beta version of iOS is released, and the process and plug-in version are 80% consistent.
+-Conduct a demo demonstration simulation internally during the National Day.
+-other TODO should be pushed forward, and there should be no action or any feedback week after week.
+After-10-10, it is planned to carry out two weeks of product roadmap design+technology stack exploration pre-research, and determine the goal and play method of the next iteration cycle.
+-Start the second iteration cycle (3 months) at the end of October, and maneuver for one week.
+-After mid-October, Rory will look at his situation and plan to work part-time in the whole stack (front and back work). Others will look at target delineation and technology stack exploration, and the visual inspection team will not make major adjustments.437 Follow-up Plan
+
+-Enter the joint debugging stage of all modules, and be online for 2-3 hours every night (robbie+jhf+ Rising Sun+Holy+others are online at any time). The goal is to complete the joint debugging before 9-30, and 80% of all problems arising will be solved.
+-Related domain names (jiajun+robbie+xuri), publishing (holy +xuri+ plugin Robbie? ), presentation preparation (jiajun+all), and preparation for list(all) begins before the festival, with division of labor.
+-recovery process demonstration, dapp interaction (1271)? Do plug-in support? Mobile phone client?
+-App's Astrox cooperation is very good, ABI, API and process are open to them, the target APK version is guaranteed, the beta version of iOS is released, and the process and plug-in version are 80% consistent.
+-Conduct a demo demonstration simulation internally during the National Day.
+-other TODO should be pushed forward, and there should be no action or any feedback week after week.
+After-10-10, it is planned to carry out two weeks of product roadmap design+technology stack exploration pre-research, and determine the goal and play method of the next iteration cycle.
+-Start the second iteration cycle (3 months) at the end of October, and maneuver for one week.
+-After mid-October, Rory will look at his situation and plan to work part-time in the whole stack (front and back work). Others will look at target delineation and technology stack exploration, and the visual inspection team will not make major adjustments.
+
+```
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
 
-### 9-22
-+ host: @zeno?
+### 9-22 -- 10-7
++ host: @Robbie
 + 1> Self check: 30 seconds to share your dev progress and your weekly target comparison.
++ We have steppted into the debugging phase, so we meet every day and night to delivery the demo until 10-7.
++ Have no time to write much and todo list will show the public later.
++ 
 + 2> Milestone check: the risk of reaching the month or weekly target and how to fix.
 + 3> Question fast discuss: technical questions and solution to discuss.
 + Copy these to next meeting notes.
