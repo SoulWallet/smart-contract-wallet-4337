@@ -7,10 +7,13 @@ L1 as the source, and the same wallet address as L1 can be created at any time o
 The wallets above L1 and L2 are uniformly created by a contract with the same address
 
 Create a wallet on L1:
+
 The user provides the initial ownerAddress-A, and the contract is executed in the same tx:
 create2(bytecode='fixed bytecode' , salt = uint256(uint160(ownerAddress-A))); // no construction parameters
 initialize(ownerAddress-A) ;// Execute the initialization function and set the wallet owner to ownerAddress-A
+
 --------
+
 User updates owner to ownerAddress-B on L1
 updateOwner(ownerAddress-B)
 
