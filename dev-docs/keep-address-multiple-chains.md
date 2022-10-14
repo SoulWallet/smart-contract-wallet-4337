@@ -84,7 +84,7 @@ contract Deployer {
 
         bytes32 salt = keccak256(abi.encodePacked(_initialWalletOwner)); 
 
-        if (chainId == 0){
+        if (chainId == 1){
             // deploy contract on L1
             require(_initialWalletOwner == msg.sender);  
             require(_walletAddress == address(0),'no need wallet address on L1');
